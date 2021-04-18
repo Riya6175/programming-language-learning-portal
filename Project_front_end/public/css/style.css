@@ -1,0 +1,214 @@
+:root {
+  --lightblue: #1687a7;
+  --darkblue: #276678; 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.navbar{
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 10px 0;
+  background: var(--lightblue);
+}
+
+.navbar .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a{
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar .menu-list{
+  display: inline-flex;
+}
+
+.menu-list li{
+  list-style: none;
+}
+
+.menu-list li a{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+.menu-list li a:hover{
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.icon{
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.icon.cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+@media (max-width: 868px){
+  .icon{
+    display: block;
+  }
+
+  .navbar .menu-list{
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    background: var(--lightblue);
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav .menu-list.active{
+    left: 0%;
+  }
+
+  .navbar .menu-list li{
+    margin-top: 45px;
+  }
+
+  .navbar .menu-list li a{
+    font-size: 23px;
+  }
+}
+
+.banner {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.banner .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background: #000000;
+    opacity: 0.8;
+    height: 100vh;
+}
+
+.banner .slider-text .subheading {
+  position: absolute;
+  font-size: 80px;
+  color: #1687a7;
+  font-weight: normal;
+  margin-bottom: 0;
+  line-height: 1;
+  font-family: "Poppins" sans-serif;
+  z-index: -1;
+}
+
+.banner .slider-text h1 {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 1.5;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+/**about us section **/
+.ftco-wrap-about {
+  background-position: bottom center !important;
+  width: 100%;
+}
+.ftco-wrap-about .heading-section h2 {
+  font-weight: 600 !important;
+}
+
+.ftco-wrap-about .img {
+  width: 100%;
+}
+
+.ftco-animate{
+  transition: all 0.3s ease;
+}
+
+.intro {
+  width: 100%;
+  background: #ffffff;
+  padding-top: 61px;
+  padding-bottom: 61px;
+}
+
+.intro_image {
+  width: 75%;
+}
+
+.intro_image img {
+  max-width: 100%;
+}
+
+.intro_content {
+  position: absolute;
+  top: 150%;
+  transform: translateY(-50%);
+  right: 0px;
+  width: 670px;
+  background: #ffffff;
+  border: solid 2px var(--lightblue);
+  box-shadow: 0px 45px 70px rgba(0, 0, 0, 0.24);
+  z-index: 1;
+  padding-top: 55px;
+  padding-bottom: 59px;
+  padding-left: 70px;
+  padding-right: 50px;
+  border-radius: 3px;
+}
+
+.intro_title {
+  margin-top: 6px;
+  font-size: 28px;
+  font-family: "Poppins";
+  color: #1687a7;
+  font-weight: 600;
+}
+
+.intro_title h2 {
+  font-size: 40px;
+}
+
+.intro_text {
+  margin-top: 32px;
+  font-size: 14px;
+}
+
