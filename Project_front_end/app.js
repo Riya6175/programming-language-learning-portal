@@ -24,7 +24,11 @@ app.get('/home', function(req, res) {
 
   app.get('/overview', function(req,res){
     res.render('overview');
-  })
+  });
+
+  app.get('/editor', function(req,res){
+    res.render('editor');
+  });
   
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
