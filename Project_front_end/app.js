@@ -70,10 +70,7 @@ app.get('/home', function(req, res) {
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
-<<<<<<< HEAD
-=======
 
->>>>>>> 634a9e45da0acbf0c24495b0e9ef7170fd2106fd
 //----------adding details to database---------------------
   app.post("/login-signup",function(req,res){
     try {
