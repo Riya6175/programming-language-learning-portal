@@ -30,7 +30,9 @@ app.get('/home', function(req, res) {
     res.render('editor');
   });
   
-
+  app.get('/login-signup',function(req,res){
+    res.render('login-signup');
+  });
 
 app.listen(3000, function(){
   console.log("Server started at 3000.");
