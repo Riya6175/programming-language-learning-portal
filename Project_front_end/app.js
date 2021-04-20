@@ -74,8 +74,8 @@ app.get('/home', function(req, res) {
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
-<<<<<<< HEAD
-----------adding details to database---------------------
+
+//----------adding details to database---------------------
   app.post("/login-signup",function(req,res){
     try {
       const newUser = new Register({
