@@ -22,9 +22,17 @@ app.get('/home', function(req, res) {
     res.render('about');
     });
 
+  app.get('/introduction', function(req,res){
+    res.render('introduction');
+  });
+
   app.get('/overview', function(req,res){
     res.render('overview');
-  })
+  });
+
+  app.get('/environment-setup', function(req,res){
+    res.render('environment-setup');
+  });
   
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
