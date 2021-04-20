@@ -31,16 +31,16 @@
              </div>
           </form>
 
-          <form action="" class="signup-form">
+          <form action="/login-signup" class="signup-form" method="POST" onsubmit="return validate()">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
-              <i class="fas fa-user"></i><input type="text" name="Username" placeholder="Username" id="username">
+              <i class="fas fa-user"></i><input type="text" name="Username" placeholder="Username" id="username" required>
             </div>
             <div class="input-field">
-              <i class="fas fa-envelope"></i><input type="email" name="Email" placeholder="Email" id="email">
+              <i class="fas fa-envelope"></i><input type="email" name="Email" placeholder="Email" id="email" required>
             </div>
             <div class="input-field">
-              <i class="fas fa-key"></i><input type="password" name="Password" placeholder="Password" id="password">
+              <i class="fas fa-key"></i><input type="password" name="Password" placeholder="Password" id="password" required>
             </div>
             <input type="submit" class="btn" value="Sign Up">
              <p class="social-text">Or Sign up with social platforms</p>
@@ -77,4 +77,20 @@
 
     <script src="scripts/login-signup.js"></script>
 </body>
+<script>
+  function validate()
+{
+verifyEmail();
+}
+function verifyEmail(){
+        var x = document.getElementById('email').value;
+        var atpos = x.indexOf("@");
+        var dotpos = x.lastIndexOf(".");
+        if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+            alert("Not a valid e-mail address");
+        return false;
+        }
+       return true;
+    }
+</script>
 </html>
