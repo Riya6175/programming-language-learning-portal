@@ -65,11 +65,16 @@ app.get('/home', function(req, res) {
 
   app.get('/overview', function(req,res){
     res.render('overview');
-  })
+  });
+
+  app.get('/editor', function(req,res){
+    res.render('editor');
+  });
   
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
+<<<<<<< HEAD
 ----------adding details to database---------------------
   app.post("/login-signup",function(req,res){
     try {
@@ -89,3 +94,11 @@ app.get('/home', function(req, res) {
 app.listen(port, function(){
   console.log(`server running on port ${port}`);
 });
+=======
+  
+
+app.listen(3000, function(){
+  console.log("Server started at 3000.");
+})
+
+>>>>>>> 2b8beff2b42f5841abc44dc30b829be319610346
