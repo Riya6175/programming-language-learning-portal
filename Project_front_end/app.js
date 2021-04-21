@@ -82,12 +82,38 @@ app.get('/home', function(req, res) {
     res.render('login-signup');
   });
 
+
   app.get('/editor',function(req,res){
     res.render('editor');
   });
 
+<<<<<<< HEAD
   app.get('/output',function(req,res){
     res.render('output');
+=======
+  app.get('/functions',function(req,res){
+    res.render('functions');
+  });
+
+  app.get('/date-time',function(req,res){
+    res.render('date-time');
+  });
+
+  app.get('/modules',function(req,res){
+    res.render('modules');
+  });
+
+  app.get('/fileio',function(req,res){
+    res.render('fileio');
+  });
+
+  app.get('/exceptions',function(req,res){
+    res.render('exceptions');
+  });
+
+  app.get('/class-objects',function(req,res){
+    res.render('class-objects');
+>>>>>>> 86679aafef373a1493e901d43c1731fb702abe57
   });
 
 //--------------Editor related code---------------
