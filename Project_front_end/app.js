@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const app = express();
 const mongoose = require("mongoose");
+const fs = require("fs");
 
 
 //________________data-base connection-----------------
@@ -30,6 +31,7 @@ const userSchema = new mongoose.Schema({
       required: true
   }
 });
+
 //------------------model---------------------------------------
 const Register = new mongoose.model("Register",userSchema);
 
@@ -78,11 +80,13 @@ app.get('/home', function(req, res) {
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
-  
+
+//--------------Editor related code---------------
+//--------------do not touch this part------------
+
 app.post('/', function(req,res){
   var data = req.body.editor;
-  console.log(data);
-});
+  console.log("Going to write into existing file");
 
 //----------adding details to database---------------------
   app.post("/login-signup",function(req,res){
