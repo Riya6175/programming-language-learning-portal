@@ -4,6 +4,7 @@ const ejs = require("ejs");
 const app = express();
 const mongoose = require("mongoose");
 const fs = require("fs");
+const cmd = require('node-cmd');
 
 
 //________________data-base connection-----------------
@@ -85,12 +86,60 @@ app.get('/home', function(req, res) {
     res.render('editor');
   });
 
+  app.get('/output',function(req,res){
+    res.render('output');
+  });
+
 //--------------Editor related code---------------
 //--------------do not touch this part------------
 
-app.post('/', function(req,res){
-  var data = req.body.editor;
-  console.log("Going to write into existing file")});
+// app.post('/output', function(req,res){
+//   var data_input = req.body.editor;
+//   console.log("Going to write into existing file")
+
+//   fs.writeFile('code.py', data_input, function(err) {
+//    if (err) {
+//       return console.error(err);
+//    }
+   
+//     console.log("Data written successfully!");
+//     cmd.runSync('python code.py');
+//     cmd.run('python code.py',
+//         function(err, data, stderr){
+//             app.get('/output',function(req,res){
+//             res.render(data);
+//             });
+//             fs.writeFile('views/output.txt', data, function(err) {
+//               if (err) {
+//                 fs.writeFile('views/output.txt', err)
+//               }
+//             });
+//         });
+//     });
+// });
+
+//-------------------------------------------------------
+var data_output = "";
+app.post('/output', function(req,res){
+  var data_input = req.body.editor;
+
+  fs.writeFile('code.py', data_input, function(err) {
+      if (err) {
+          return console.error(err);
+      }
+  });
+  
+  cmd.runSync('python code.py');
+  cmd.run('python code.py',
+  function(err, data, stderr, res){
+    data_output = data;
+  });
+  res.send(data_output);
+  console.log(data_output)
+});
+  
+
+  
 
 //----------adding details to database---------------------
   app.post("/login-signup",function(req,res){

@@ -1,5 +1,4 @@
 <%- include("partials/header") -%>
-
 <style>
   .editor-head{
     display: flex; 
@@ -56,6 +55,7 @@
   margin: 4px 2px;
   cursor: pointer;
   transition-duration: 0.4s;
+  outline: none !important;
   }
 
   .button:hover {
@@ -84,23 +84,44 @@
   }
 </style>
 
-<form action="/" method="POST">
+<form action="/output" method="POST">
 <div class="editor-div">
 <h1 style="" class="editor-head">RUN THE CODE</h1>
 <textarea id="editor" name="editor" class="editor" rows="20" cols="50">
 #Write your code here
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
 </textarea>
 </div>
 <div class="button-div"><input type="submit" value="Run" class="button"></div>
 
 <div class="output-div">
 <label for="textarea">Output : </label>
-<textarea type="hidden" id="" name="output" class="output" rows="8" cols="50">
+<textarea id="output" name="output" class="output" rows="8" cols="50">
 Your output
 </textarea>
 </div>
+<script>
+  
+    // var fs = require("fs");
+    // fs.readFile('output.txt', function (err, data) {
+    //   if (err) {
+    //      return console.error(err);
+    //   }
+    //   document.getElementById("output").innerHTML = data;
+    // });
 
-    <br><br>
+  fetch('output.txt')
+  .then(response => response.text())
+  .then(data => {
+  	// Do something with your data
+  	console.log(data);
+  });
+
+</script>
+
+<br><br>
 </form>
 
 <%- include("partials/footer") -%>
@@ -121,4 +142,5 @@ Your output
       this.selectionEnd = start + 1;
   }
 });
+
 </script>
