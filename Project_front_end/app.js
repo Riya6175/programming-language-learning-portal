@@ -81,12 +81,16 @@ app.get('/home', function(req, res) {
     res.render('login-signup');
   });
 
+  app.get('/editor',function(req,res){
+    res.render('editor');
+  });
+
 //--------------Editor related code---------------
 //--------------do not touch this part------------
 
 app.post('/', function(req,res){
   var data = req.body.editor;
-  console.log("Going to write into existing file");
+  console.log("Going to write into existing file")});
 
 //----------adding details to database---------------------
   app.post("/login-signup",function(req,res){
@@ -97,7 +101,7 @@ app.post('/', function(req,res){
         Password: req.body.Password
       });
         newUser.save();
-        res.render("editor");
+        res.render("c-editor");
     } catch (error) {
       res.status(400).send(error);
     }
@@ -105,5 +109,5 @@ app.post('/', function(req,res){
   });
 
 app.listen(port, function(){
-  console.log(`server running on port ${port}`);
+  console.log('server running on port ${port}');
 });
