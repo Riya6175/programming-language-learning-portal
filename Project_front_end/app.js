@@ -81,6 +81,7 @@ app.get('/home', function(req, res) {
     res.render('login-signup');
   });
 
+
   app.get('/editor',function(req,res){
     res.render('editor');
   });
