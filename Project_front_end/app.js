@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const app = express();
 const mongoose = require("mongoose");
+const fs = require("fs");
 
 
 //________________data-base connection-----------------
@@ -30,6 +31,7 @@ const userSchema = new mongoose.Schema({
       required: true
   }
 });
+
 //------------------model---------------------------------------
 const Register = new mongoose.model("Register",userSchema);
 
@@ -63,13 +65,33 @@ app.get('/home', function(req, res) {
     res.render('about');
     });
 
+  app.get('/introduction', function(req,res){
+    res.render('introduction');
+  });
+
   app.get('/overview', function(req,res){
     res.render('overview');
-  })
+  });
+
+  app.get('/environment-setup', function(req,res){
+    res.render('environment-setup');
+  });
   
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
+
+
+  app.get('/editor',function(req,res){
+    res.render('editor');
+  });
+
+//--------------Editor related code---------------
+//--------------do not touch this part------------
+
+app.post('/', function(req,res){
+  var data = req.body.editor;
+  console.log("Going to write into existing file")});
 
 //----------adding details to database---------------------
   app.post("/login-signup",function(req,res){
@@ -80,7 +102,7 @@ app.get('/home', function(req, res) {
         Password: req.body.Password
       });
         newUser.save();
-        res.render("editor");
+        res.render("c-editor");
     } catch (error) {
       res.status(400).send(error);
     }
@@ -88,5 +110,5 @@ app.get('/home', function(req, res) {
   });
 
 app.listen(port, function(){
-  console.log(`server running on port ${port}`);
+  console.log('server running on port ${port}');
 });
