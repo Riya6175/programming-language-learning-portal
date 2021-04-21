@@ -34,6 +34,10 @@ app.get('/home', function(req, res) {
     res.render('login-signup');
   });
   
+app.post('/', function(req,res){
+  var data = req.body.editor;
+  console.log(data);
+});
 
 app.listen(3000, function(){
   console.log("Server started at 3000.");
