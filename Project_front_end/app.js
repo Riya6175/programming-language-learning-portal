@@ -85,6 +85,30 @@ app.get('/home', function(req, res) {
     res.render('editor');
   });
 
+  app.get('/functions',function(req,res){
+    res.render('functions');
+  });
+
+  app.get('/date-time',function(req,res){
+    res.render('date-time');
+  });
+
+  app.get('/modules',function(req,res){
+    res.render('modules');
+  });
+
+  app.get('/fileio',function(req,res){
+    res.render('fileio');
+  });
+
+  app.get('/exceptions',function(req,res){
+    res.render('exceptions');
+  });
+
+  app.get('/class-objects',function(req,res){
+    res.render('class-objects');
+  });
+
 //--------------Editor related code---------------
 //--------------do not touch this part------------
 
