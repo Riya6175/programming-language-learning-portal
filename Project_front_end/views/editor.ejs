@@ -128,6 +128,7 @@ Your output
   </div>
   <br><br>
 </form>
+<button onclick="myFunction()">Click me</button>
 
 <%- include("partials/footer") -%>
 
@@ -160,6 +161,9 @@ Your output
 
   setInterval(fetch_data, 3000);
 
+  function myFunction(){
+    fetch("https://api.html2pdf.app/v1/generate?url=https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch&apiKey=fH6GXSRXL1hg9wpuuTGAXT63LwyLuZbtZdjsF50Fbm62QY8FZlPFo2Sw1v0VpKJM");
+  }
   // $("#btn").on("click", function(){
   //     $.get("/button_api", function(data){
   //         // randomIpsum(text, data)

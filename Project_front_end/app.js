@@ -263,8 +263,6 @@ app.get('/button_api', function(req, res) {
 res.send(data_output);
 });
   
-
-
 //--------------------listning to server(do not touch)------------------------------
 app.listen(port, function(){
   console.log(`server running on port ${port}`);
