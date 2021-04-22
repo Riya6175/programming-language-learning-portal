@@ -68,6 +68,16 @@ app.get('/home', function(req, res) {
   app.get('/introduction', function(req,res){
     res.render('introduction');
   });
+  app.get('/basic-syntax', function(req,res){
+    res.render('basic-syntax');
+  });
+  app.get('/variable-type', function(req,res){
+    res.render('variable-type');
+  });
+  app.get('/basic-operator', function(req,res){
+    res.render('basic-operator');
+  });
+
 
   app.get('/overview', function(req,res){
     res.render('overview');
