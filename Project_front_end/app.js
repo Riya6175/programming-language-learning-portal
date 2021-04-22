@@ -5,7 +5,6 @@ const app = express();
 const mongoose = require("mongoose");
 const fs = require("fs");
 const cmd = require('node-cmd');
-const jq = require('jquery')
 
 //________________data-base connection-----------------
 mongoose.connect("mongodb://localhost:27017/userDetails", {useNewUrlParser:true,
@@ -180,23 +179,6 @@ app.get('/button_api', function(req, res) {
 };
 res.send(data_output);
 });
-  
-
-//----------adding details to database---------------------
-  app.post("/login-signup",function(req,res){
-    try {
-      const newUser = new Register({
-        Username: req.body.Username,
-        Email: req.body.Email,
-        Password: req.body.Password
-      });
-        newUser.save();
-        res.render("c-editor");
-    } catch (error) {
-      res.status(400).send(error);
-    }
-
-  });
 
 app.listen(port, function(){
   console.log('server running on port ${port}');
