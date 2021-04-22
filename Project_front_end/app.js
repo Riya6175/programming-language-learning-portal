@@ -77,26 +77,58 @@ app.get('/home', function(req, res) {
   app.get('/environment-setup', function(req,res){
     res.render('environment-setup');
   });
-  
+
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
-
 
   app.get('/editor',function(req,res){
     res.render('editor');
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   app.get('/output',function(req,res){
     res.render('output');
 =======
   app.get('/functions',function(req,res){
     res.render('functions');
+=======
+  app.get('/decision-making',function(req,res){
+    res.render('decision-making');
+  });
+
+  app.get('/loops',function(req,res){
+    res.render('loops');
+  });
+
+  app.get('/numbers',function(req,res){
+    res.render('numbers');
+  });
+
+  app.get('/strings',function(req,res){
+    res.render('strings');
+  });
+
+  app.get('/lists',function(req,res){
+    res.render('lists');
+  });
+
+  app.get('/tuples',function(req,res){
+    res.render('tuples');
+  });
+
+  app.get('/dictionary',function(req,res){
+    res.render('dictionary');
+>>>>>>> 86f452d4621393c7011a08e2590cda5ed2c6dae8
   });
 
   app.get('/date-time',function(req,res){
-    res.render('date-time');
+    res.render('dictionary');
+  });
+
+  app.get('/functions',function(req,res){
+    res.render('functions');
   });
 
   app.get('/modules',function(req,res){
@@ -115,6 +147,7 @@ app.get('/home', function(req, res) {
     res.render('class-objects');
 >>>>>>> 86679aafef373a1493e901d43c1731fb702abe57
   });
+
 
 //--------------Editor related code---------------
 //--------------do not touch this part------------
@@ -180,7 +213,7 @@ app.post('/output', function(req,res){
     } catch (error) {
       res.status(400).send(error);
     }
-     
+
   });
 
 app.listen(port, function(){

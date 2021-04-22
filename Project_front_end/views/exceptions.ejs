@@ -2,7 +2,7 @@
 <%- include("partials/side-nav") -%>
 
 <section class="ftco-content">
-    <h2 class="page-title">Python - Exceptions Handling</h2>
+    <h2 class="page-title">Exceptions Handling</h2>
     <nav class="links">
         <button class="btn-links">PDF Version</button>
         <button class="btn-links" onclick="location.href='/date-time'">Date & Time </button>
@@ -138,12 +138,12 @@
             </p>
         </aside>
         <p class="content">
-            If the assertion fails, Python uses ArgumentExpression as the argument for the AssertionError. AssertionError exceptions can be caught and handled like any other exception using the try-except statement, 
+            If the assertion fails, Python uses ArgumentExpression as the argument for the AssertionError. AssertionError exceptions can be caught and handled like any other exception using the try-except statement,
             but if not handled, they will terminate the program and produce a traceback.
         </p>
         <h3 class="subtitle">Example</h3>
         <p class="content">
-            Here is a function that converts a temperature from degrees Kelvin to degrees Fahrenheit. Since zero degrees Kelvin is as cold as it gets, 
+            Here is a function that converts a temperature from degrees Kelvin to degrees Fahrenheit. Since zero degrees Kelvin is as cold as it gets,
                 the function bails out if it sees a negative temperature −
         </p>
         <aside class="code-frame">
@@ -176,20 +176,20 @@
         <h3 class="subtitle">What is Exception?</h3>
         <p class="content">
             An exception is an event, which occurs during the execution of a program that disrupts the normal flow of the program's instructions.
-             In general, when a Python script encounters a situation that it cannot cope with, it raises an exception. An exception is a Python object 
+             In general, when a Python script encounters a situation that it cannot cope with, it raises an exception. An exception is a Python object
              that represents an error.
             <br>
             When a Python script raises an exception, it must either handle the exception immediately otherwise it terminates and quits.
         </p>
         <h3 class="subtitle">Handling an exception</h3>
         <p class="content">
-            If you have some suspicious code that may raise an exception, you can defend your program by placing the suspicious code in a try: block. 
+            If you have some suspicious code that may raise an exception, you can defend your program by placing the suspicious code in a try: block.
             After the try: block, include an except: statement, followed by a block of code which handles the problem as elegantly as possible.
         </p>
-        <h3 class="subtitle">Syntax</h3> 
+        <h3 class="subtitle">Syntax</h3>
         <p class="content">
             Here is simple syntax of try....except...else blocks −
-        </p>  
+        </p>
         <aside class="code-frame">
             <p class="code">
                 <span class="function">try:
@@ -203,10 +203,10 @@
                    else:<br>
                    If there is no exception then execute this block.<br> </span><br>
             </p>
-        </aside> 
+        </aside>
         <p class="content">
             Here are few important points about the above-mentioned syntax −
-        </p>   
+        </p>
         <ul class="content-bulletlist">
             <li> A single try statement can have multiple except statements. This is useful when the try block contains statements that may throw different types of exceptions.</li>
             <li> You can also provide a generic except clause, which handles any exception.</li>
@@ -216,7 +216,7 @@
         <h3 class="subtitle">Example</h3>
         <p class="content">
             This example opens a file, writes content in the, file and comes out gracefully because there is no problem at all −
-        </p>  
+        </p>
         <aside class="code-frame">
             <p class="code">
                 <span class="function">#!/usr/bin/python</span><br>
@@ -233,11 +233,11 @@
         </aside>
         <p class="content">
             Written content in the file successfully
-        </p>  
+        </p>
         <h3 class="subtitle">The except Clause with No Exceptions</h3>
         <p class="content">
             You can also use the except statement with no exceptions defined as follows −
-        </p>  
+        </p>
         <aside class="code-frame">
             <p class="code">
                 <span class="function">try:<br>
@@ -250,22 +250,22 @@
                     If there is no exception then execute this block. <br></span><br>
             </p>
         </aside>
-        
+
         <p class="content">
             This kind of a try-except statement catches all the exceptions that occur. Using this kind of try-except statement is not considered a good programming practice though, because it catches all exceptions but does not make the programmer identify the root cause of the problem that may occur.
-        </p>  
+        </p>
 
         <h3 class="subtitle">The except Clause with Multiple Exceptions</h3>
         <p class="content">
             You can also use the same except statement to handle multiple exceptions as follows −
-        </p>  
+        </p>
         <aside class="code-frame">
             <p class="code">
                 <span class="function">try:<br>
                     You do your operations here;<br>
                     ......................<br>
                     except(Exception1[, Exception2[,...ExceptionN]]]):<br>
-                    If there is any exception from the given exception list,<br> 
+                    If there is any exception from the given exception list,<br>
                     then execute this block.<br>
                     ......................<br>
                     else:<br>
@@ -276,7 +276,7 @@
         <h3 class="subtitle">The try-finally Clause</h3>
         <p class="content">
             You can use a finally: block along with a try: block. The finally block is a place to put any code that must execute, whether the try-block raised an exception or not. The syntax of the try-finally statement is this −
-        </p>  
+        </p>
         <aside class="code-frame">
             <p class="code">
                 <span class="function">try:<br>
@@ -290,9 +290,9 @@
         </aside>
         <p class="content">
             You cannot use else clause as well along with a finally clause.
-        </p>  
+        </p>
 
-        <h3 class="subtitle">Example</h3>        
+        <h3 class="subtitle">Example</h3>
         <aside class="code-frame">
             <p class="code">
                 <span class="function">#!/usr/bin/python</span><br>
@@ -306,7 +306,7 @@
         </aside>
         <p class="content">
             If you do not have permission to open the file in writing mode, then this will produce the following result -
-        </p>  
+        </p>
         <aside class="code-frame">
             <p class="content">
                 Error: can't find file or read data
