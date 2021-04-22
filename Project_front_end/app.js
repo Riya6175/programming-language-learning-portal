@@ -18,8 +18,6 @@ app.use(express.static("public"));
 
 
 const cmd = require('node-cmd');
-<<<<<<< HEAD
-=======
 const jq = require('jquery');
 
 app.use(express.urlencoded({extended:false}));
@@ -32,7 +30,6 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
->>>>>>> 4b358e33e82a40a766940b84e96c4ffe6c6452e8
 
 //________________data-base connection-----------------
 mongoose.connect("mongodb://localhost:27017/userDetails", {useNewUrlParser:true,
@@ -260,12 +257,7 @@ app.get('/button_api', function(req, res) {
 };
 res.send(data_output);
 });
-<<<<<<< HEAD
-=======
   
-
->>>>>>> 4b358e33e82a40a766940b84e96c4ffe6c6452e8
-
 //--------------------listning to server(do not touch)------------------------------
 app.listen(port, function(){
   console.log(`server running on port ${port}`);
