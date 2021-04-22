@@ -4,7 +4,7 @@
 <section class="ftco-content">
 
 
-    <h2 class="page-title">Python - Modules</h2>
+    <h2 class="page-title">Modules</h2>
     <nav class="links">
         <button class="btn-links">PDF Version</button>
         <button class="btn-links" onclick="location.href='/date-time'">Date & Time </button>
@@ -31,7 +31,7 @@
                 <span class="function">return</span>
             </p>
         </aside>
-        
+
         <h3 class="subtittle">The import Statement</h3>
         <p class="content">
             You can use any Python source file as a module by executing an import statement in some other Python source file. The import has the following syntax −
@@ -42,8 +42,8 @@
             </p>
         </aside>
         <p class="content">
-            When the interpreter encounters an import statement, it imports the module if the module is present in the search path. A search path is a list of 
-            directories that the interpreter 
+            When the interpreter encounters an import statement, it imports the module if the module is present in the search path. A search path is a list of
+            directories that the interpreter
             searches before importing a module. For example, to import the module support.py, you need to put the following command at the top of the script −
         </p>
         <aside class="code-frame">
@@ -65,8 +65,8 @@
             </p>
         </aside>
         <p class="content">
-            A module is loaded only once, 
-            regardless of the number of times it is imported. 
+            A module is loaded only once,
+            regardless of the number of times it is imported.
             This prevents the module execution from happening over and over again if multiple imports occur.
         </p>
 
@@ -88,7 +88,7 @@
             </p>
         </aside>
         <p class="content">
-            This statement does not import the entire module fib into the current namespace; 
+            This statement does not import the entire module fib into the current namespace;
             it just introduces the item fibonacci from the module fib into the global symbol table of the importing module.
         </p>
 
@@ -102,13 +102,13 @@
             <li> If all else fails, Python checks the default path. On UNIX, this default path is normally /usr/local/lib/python/.</li>
         </ul>
         <p class="content">
-            The module search path is stored in the system module sys as the sys.path variable. The sys.path variable contains the current directory, 
+            The module search path is stored in the system module sys as the sys.path variable. The sys.path variable contains the current directory,
             PYTHONPATH, and the installation-dependent default.
         </p>
 
         <h3 class="subtittle">The PYTHONPATH Variable</h3>
         <p class="content">
-            The PYTHONPATH is an environment variable, consisting of a list of directories. The syntax of PYTHONPATH is the same as that of the 
+            The PYTHONPATH is an environment variable, consisting of a list of directories. The syntax of PYTHONPATH is the same as that of the
             shell variable PATH.
             <br>
             Here is a typical PYTHONPATH from a Windows system −
@@ -131,7 +131,7 @@
         <p class="content">
             Variables are names (identifiers) that map to objects. A namespace is a dictionary of variable names (keys) and their corresponding objects (values).
             <br>
-            A Python statement can access variables in a local namespace and in the global namespace. If a local and a global variable have the same name, 
+            A Python statement can access variables in a local namespace and in the global namespace. If a local and a global variable have the same name,
             the local variable shadows the global variable.
             <br>
             Each function has its own local namespace. Class methods follow the same scoping rule as ordinary functions.
@@ -142,8 +142,8 @@
             <br>
             The statement global VarName tells Python that VarName is a global variable. Python stops searching the local namespace for the variable.
             <br>
-            For example, we define a variable Money in the global namespace. Within the function Money, we assign Money a value, therefore Python assumes 
-            Money as a local variable. However, we accessed the value of the local variable Money before setting it, so an UnboundLocalError is the result. 
+            For example, we define a variable Money in the global namespace. Within the function Money, we assign Money a value, therefore Python assumes
+            Money as a local variable. However, we accessed the value of the local variable Money before setting it, so an UnboundLocalError is the result.
             Uncommenting the global statement fixes the problem.
         </p>
         <aside class="code-frame">
@@ -183,10 +183,10 @@
         </p>
         <aside class="code-frame">
             <p class="content">
-                ['__doc__', '__file__', '__name__', 'acos', 'asin', 'atan', 
-                'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp', 
+                ['__doc__', '__file__', '__name__', 'acos', 'asin', 'atan',
+                'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp',
                 'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log',
-                'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 
+                'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh',
                 'sqrt', 'tan', 'tanh']
             </p>
         </aside>
@@ -196,7 +196,7 @@
 
         <h3 class="subtittle">The reload() Function</h3>
         <p class="content">
-            The globals() and locals() functions can be used to return the names in the global and local namespaces depending on the 
+            The globals() and locals() functions can be used to return the names in the global and local namespaces depending on the
             location from where they are called.
             <br>
             If locals() is called from within a function, it will return all the names that can be accessed locally from that function.
@@ -208,12 +208,12 @@
 
         <h3 class="subtittle">The globals() and locals() Functions</h3>
         <p class="content">
-            The globals() and locals() functions can be used to return the names in the global and local namespaces depending on the location 
+            The globals() and locals() functions can be used to return the names in the global and local namespaces depending on the location
             from where they are called.
             <br>
             If locals() is called from within a function, it will return all the names that can be accessed locally from that function.
             <br>
-            If globals() is called from within a function, it will return all the names that can be accessed globally from that function.   
+            If globals() is called from within a function, it will return all the names that can be accessed globally from that function.
             <br>
             The return type of both these functions is dictionary. Therefore, names can be extracted using the keys() function.
         </p>
@@ -222,7 +222,7 @@
         <p class="content">
             When the module is imported into a script, the code in the top-level portion of a module is executed only once.
             <br>
-            Therefore, if you want to reexecute the top-level code in a module, you can use the reload() function. The reload() function 
+            Therefore, if you want to reexecute the top-level code in a module, you can use the reload() function. The reload() function
             imports a previously imported module again. The syntax of the reload() function is this −
         </p>
         <aside class="code-frame">
@@ -231,7 +231,7 @@
             </p>
         </aside>
         <p class="content">
-            Here, module_name is the name of the module you want to reload and not the string containing the module name. For example, 
+            Here, module_name is the name of the module you want to reload and not the string containing the module name. For example,
             to reload hello module, do the following −
         </p>
         <aside class="code-frame">

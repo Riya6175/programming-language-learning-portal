@@ -4,7 +4,8 @@ const ejs = require("ejs");
 const app = express();
 const mongoose = require("mongoose");
 const fs = require("fs");
-
+const cmd = require('node-cmd');
+const jq = require('jquery')
 
 //________________data-base connection-----------------
 mongoose.connect("mongodb://localhost:27017/userDetails", {useNewUrlParser:true,
@@ -53,13 +54,13 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended:false}));
 
-app.get('/', function(req, res) {
-    res.render('index');
-    });
+  app.get('/', function(req, res) {
+      res.render('index');
+      });
 
-app.get('/home', function(req, res) {
-  res.render('home');
-  });
+  app.get('/home', function(req, res) {
+    res.render('home');
+    });
 
   app.get('/about', function(req, res) {
     res.render('about');
@@ -76,22 +77,57 @@ app.get('/home', function(req, res) {
   app.get('/environment-setup', function(req,res){
     res.render('environment-setup');
   });
-  
+
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
 
-
   app.get('/editor',function(req,res){
     res.render('editor');
+  });
+
+  app.get('/output',function(req,res){
+    res.render('output');
   });
 
   app.get('/functions',function(req,res){
     res.render('functions');
   });
 
+  app.get('/decision-making',function(req,res){
+    res.render('decision-making');
+  });
+
+  app.get('/loops',function(req,res){
+    res.render('loops');
+  });
+
+  app.get('/numbers',function(req,res){
+    res.render('numbers');
+  });
+
+  app.get('/strings',function(req,res){
+    res.render('strings');
+  });
+
+  app.get('/lists',function(req,res){
+    res.render('lists');
+  });
+
+  app.get('/tuples',function(req,res){
+    res.render('tuples');
+  });
+
+  app.get('/dictionary',function(req,res){
+    res.render('dictionary');
+  });
+
   app.get('/date-time',function(req,res){
-    res.render('date-time');
+    res.render('dictionary');
+  });
+
+  app.get('/functions',function(req,res){
+    res.render('functions');
   });
 
   app.get('/modules',function(req,res){
@@ -112,10 +148,39 @@ app.get('/home', function(req, res) {
 
 //--------------Editor related code---------------
 //--------------do not touch this part------------
+//------------------------------------------------
+var data_output = "";
+app.post('/output', function(req,res){
+  var data_input = req.body.editor;
 
-app.post('/', function(req,res){
-  var data = req.body.editor;
-  console.log("Going to write into existing file")});
+  fs.writeFile('code.py', data_input, function(err) {
+      if (err) {
+          return console.error(err);
+      }
+  });
+  
+  cmd.runSync('python code.py');
+  cmd.run('python code.py',
+  function(err, data, stderr, res){
+    if(stderr)
+    {
+      data_output = stderr;
+    }
+    else{
+      data_output = data;
+    }
+    
+  });
+  // res.send(data_output);
+  // setTimeout(() => {  res.send(data_output); }, 2000);
+});
+
+app.get('/button_api', function(req, res) {
+  exports.getTeamData = function () {
+};
+res.send(data_output);
+});
+  
 
 //----------adding details to database---------------------
   app.post("/login-signup",function(req,res){
@@ -130,7 +195,7 @@ app.post('/', function(req,res){
     } catch (error) {
       res.status(400).send(error);
     }
-     
+
   });
 
 app.listen(port, function(){
