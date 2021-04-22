@@ -20,3 +20,24 @@
 .dropdown-menu{
     left: -53px !important;
 }
+.name1{
+    font-size: 18px !important;
+    color: rgba(255,255,255,1) !important;
+    text-align: center !important;
+    font-weight: 600  !important;
+}
+.name1:hover{
+    color:var(--darkblue)  !important;
+}
+
+.btn-logout{
+    background-color: transparent;
+    color: rgba(255,255,255,1) !important ; 
+    outline: none !important;
+    border: none !important;
+
+}
+
+.btn-logout:hover{
+    color: var(--darkblue) !important ; 
+}

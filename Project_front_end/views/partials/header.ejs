@@ -8,6 +8,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/content.css">
+      <link rel="stylesheet" href="css/header2.css">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <script src="https://kit.fontawesome.com/320f551013.js" crossorigin="anonymous"></script>
   </head>
@@ -35,12 +36,28 @@
                 <li><a class="dropdown-item" href="#">Python - Advanced</a></li>
                 </ul>
           </li>
-		  <li class="nav-item">
-              <a class="nav-link" href="/editor">Code Editor</a>
+          <li class="nav-item"> 
+            <a class="nav-link" href="/editor">Code Editor</a>
+      </li>
+      
+          <% if(isAuthenticated){ %>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="images/user1.png" class="user-profile">
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item name1" href="#" >Riya</a>
+                <a class="dropdown-item" href="#">View Profile</a>
+                <a class="dropdown-item" href="#">Change Password</a>
+                <button class="dropdown-item btn-logout" href="/" onclick= "location.href = '/logout' ">Logout</button>
+              </div>
+            </div>
+        <%  }else{ %>
+          
           <li class="nav-item">
             <button class="btn-lgsp" onclick="location.href = '/login-signup' ">Log in / Sign Up</button> 
             
-            
+          <% } %>
 
           </li>
         </ul>

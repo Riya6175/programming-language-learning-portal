@@ -32,7 +32,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //________________data-base connection-----------------
-mongoose.connect("mongodb://localhost:27017/userDetails", {useNewUrlParser:true,
+mongoose.connect("mongodb+srv://Riya_06:Riy@6175@atlas@cluster0.mnab0.mongodb.net/userDetails?retryWrites=true/userDetails", {useNewUrlParser:true,
 useUnifiedTopology: true,
 useCreateIndex:true
 });
@@ -73,6 +73,11 @@ passport.deserializeUser(function(id, done) {
 });
 
 const port = process.env.PORT || 3000;
+
+app.use(function(req,res,next){
+  res.locals.isAuthenticated = req.isAuthenticated();
+  next();
+});
 
 app.get('/', function(req, res) {
     res.render('index');
