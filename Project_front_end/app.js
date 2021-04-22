@@ -8,6 +8,7 @@ const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const mongoose = require("mongoose");
 const fs = require("fs");
+<<<<<<< HEAD
 app.use(express.json());
 app.set('view engine', 'ejs');
 
@@ -18,6 +19,10 @@ app.use(express.static("public"));
 
 
 
+=======
+const cmd = require('node-cmd');
+const jq = require('jquery')
+>>>>>>> 6c4e3455155e4b376f09616c3e83b3a0cc7335d8
 
 app.use(express.urlencoded({extended:false}));
 
@@ -73,13 +78,13 @@ passport.deserializeUser(function(id, done) {
 
 const port = process.env.PORT || 3000;
 
-app.get('/', function(req, res) {
-    res.render('index');
-    });
+  app.get('/', function(req, res) {
+      res.render('index');
+      });
 
-app.get('/home', function(req, res) {
-  res.render('home');
-  });
+  app.get('/home', function(req, res) {
+    res.render('home');
+    });
 
   app.get('/about', function(req, res) {
     res.render('about');
@@ -96,11 +101,12 @@ app.get('/home', function(req, res) {
   app.get('/environment-setup', function(req,res){
     res.render('environment-setup');
   });
-  
+
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
 
+<<<<<<< HEAD
 
   app.get("/editor",function(req,res){
     if(req.isAuthenticated()){
@@ -148,14 +154,128 @@ app.get('/home', function(req, res) {
   });
 
   
+=======
+  app.get('/editor',function(req,res){
+    res.render('editor');
+  });
+
+  app.get('/output',function(req,res){
+    res.render('output');
+  });
+
+  app.get('/functions',function(req,res){
+    res.render('functions');
+  });
+
+  app.get('/decision-making',function(req,res){
+    res.render('decision-making');
+  });
+
+  app.get('/loops',function(req,res){
+    res.render('loops');
+  });
+
+  app.get('/numbers',function(req,res){
+    res.render('numbers');
+  });
+
+  app.get('/strings',function(req,res){
+    res.render('strings');
+  });
+
+  app.get('/lists',function(req,res){
+    res.render('lists');
+  });
+
+  app.get('/tuples',function(req,res){
+    res.render('tuples');
+  });
+
+  app.get('/dictionary',function(req,res){
+    res.render('dictionary');
+  });
+
+  app.get('/date-time',function(req,res){
+    res.render('dictionary');
+  });
+
+  app.get('/functions',function(req,res){
+    res.render('functions');
+  });
+
+  app.get('/modules',function(req,res){
+    res.render('modules');
+  });
+
+  app.get('/fileio',function(req,res){
+    res.render('fileio');
+  });
+
+  app.get('/exceptions',function(req,res){
+    res.render('exceptions');
+  });
+
+  app.get('/class-objects',function(req,res){
+    res.render('class-objects');
+  });
+
+>>>>>>> 6c4e3455155e4b376f09616c3e83b3a0cc7335d8
 //--------------Editor related code---------------
 //--------------do not touch this part------------
+//------------------------------------------------
+var data_output = "";
+app.post('/output', function(req,res){
+  var data_input = req.body.editor;
 
-app.post('/', function(req,res){
-  var data = req.body.editor;
-  console.log("Going to write into existing file")});
+  fs.writeFile('code.py', data_input, function(err) {
+      if (err) {
+          return console.error(err);
+      }
+  });
+  
+  cmd.runSync('python code.py');
+  cmd.run('python code.py',
+  function(err, data, stderr, res){
+    if(stderr)
+    {
+      data_output = stderr;
+    }
+    else{
+      data_output = data;
+    }
+    
+  });
+  // res.send(data_output);
+  // setTimeout(() => {  res.send(data_output); }, 2000);
+});
 
+app.get('/button_api', function(req, res) {
+  exports.getTeamData = function () {
+};
+res.send(data_output);
+});
+  
+
+<<<<<<< HEAD
 //--------------------listning to server(do not touch)------------------------------
+=======
+//----------adding details to database---------------------
+  app.post("/login-signup",function(req,res){
+    try {
+      const newUser = new Register({
+        Username: req.body.Username,
+        Email: req.body.Email,
+        Password: req.body.Password
+      });
+        newUser.save();
+        res.render("c-editor");
+    } catch (error) {
+      res.status(400).send(error);
+    }
+
+  });
+
+>>>>>>> 6c4e3455155e4b376f09616c3e83b3a0cc7335d8
 app.listen(port, function(){
   console.log(`server running on port ${port}`);
 });
