@@ -76,7 +76,7 @@ app.get('/home', function(req, res) {
   app.get('/environment-setup', function(req,res){
     res.render('environment-setup');
   });
-  
+
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
@@ -84,6 +84,35 @@ app.get('/home', function(req, res) {
   app.get('/editor',function(req,res){
     res.render('editor');
   });
+
+  app.get('/decision-making',function(req,res){
+    res.render('decision-making');
+  });
+
+  app.get('/loops',function(req,res){
+    res.render('loops');
+  });
+
+  app.get('/numbers',function(req,res){
+    res.render('numbers');
+  });
+
+  app.get('/strings',function(req,res){
+    res.render('strings');
+  });
+
+  app.get('/lists',function(req,res){
+    res.render('lists');
+  });
+
+  app.get('/tuples',function(req,res){
+    res.render('tuples');
+  });
+
+  app.get('/dictionary',function(req,res){
+    res.render('dictionary');
+  });
+
 
 //--------------Editor related code---------------
 //--------------do not touch this part------------
@@ -105,7 +134,7 @@ app.post('/', function(req,res){
     } catch (error) {
       res.status(400).send(error);
     }
-     
+
   });
 
 app.listen(port, function(){
