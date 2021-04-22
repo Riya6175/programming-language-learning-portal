@@ -8,7 +8,6 @@ const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const mongoose = require("mongoose");
 const fs = require("fs");
-
 app.use(express.json());
 app.set('view engine', 'ejs');
 
@@ -18,11 +17,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 
-
-
 const cmd = require('node-cmd');
-const jq = require('jquery')
-
+const jq = require('jquery');
 
 app.use(express.urlencoded({extended:false}));
 
@@ -78,17 +74,25 @@ passport.deserializeUser(function(id, done) {
 
 const port = process.env.PORT || 3000;
 
-  app.get('/', function(req, res) {
-      res.render('index');
-      });
-
-  app.get('/home', function(req, res) {
-    res.render('home');
+app.get('/', function(req, res) {
+    res.render('index');
     });
+
+app.get('/home', function(req, res) {
+  res.render('home');
+  });
 
   app.get('/about', function(req, res) {
     res.render('about');
     });
+
+  app.get('/introduction', function(req,res){
+    res.render('introduction');
+  });
+
+  app.get('/overview', function(req,res){
+    res.render('overview');
+  });
 
   app.get('/introduction', function(req,res){
     res.render('introduction');
@@ -104,18 +108,73 @@ const port = process.env.PORT || 3000;
   });
 
 
-  app.get('/overview', function(req,res){
-    res.render('overview');
-  });
-
   app.get('/environment-setup', function(req,res){
     res.render('environment-setup');
   });
 
+  app.get('/output',function(req,res){
+    res.render('output');
+  });
+
+  app.get('/functions',function(req,res){
+    res.render('functions');
+  });
+
+  app.get('/decision-making',function(req,res){
+    res.render('decision-making');
+  });
+
+  app.get('/loops',function(req,res){
+    res.render('loops');
+  });
+
+  app.get('/numbers',function(req,res){
+    res.render('numbers');
+  });
+
+  app.get('/strings',function(req,res){
+    res.render('strings');
+  });
+
+  app.get('/lists',function(req,res){
+    res.render('lists');
+  });
+
+  app.get('/tuples',function(req,res){
+    res.render('tuples');
+  });
+
+  app.get('/dictionary',function(req,res){
+    res.render('dictionary');
+  });
+
+  app.get('/date-time',function(req,res){
+    res.render('date-time');
+  });
+
+  app.get('/functions',function(req,res){
+    res.render('functions');
+  });
+
+  app.get('/modules',function(req,res){
+    res.render('modules');
+  });
+
+  app.get('/fileio',function(req,res){
+    res.render('fileio');
+  });
+
+  app.get('/exceptions',function(req,res){
+    res.render('exceptions');
+  });
+
+  app.get('/class-objects',function(req,res){
+    res.render('class-objects');
+  });
+  
   app.get('/login-signup',function(req,res){
     res.render('login-signup');
   });
-
 
 
   app.get("/editor",function(req,res){
@@ -164,75 +223,9 @@ const port = process.env.PORT || 3000;
   });
 
   
-
-  app.get('/editor',function(req,res){
-    res.render('editor');
-  });
-
-  app.get('/output',function(req,res){
-    res.render('output');
-  });
-
-  app.get('/functions',function(req,res){
-    res.render('functions');
-  });
-
-  app.get('/decision-making',function(req,res){
-    res.render('decision-making');
-  });
-
-  app.get('/loops',function(req,res){
-    res.render('loops');
-  });
-
-  app.get('/numbers',function(req,res){
-    res.render('numbers');
-  });
-
-  app.get('/strings',function(req,res){
-    res.render('strings');
-  });
-
-  app.get('/lists',function(req,res){
-    res.render('lists');
-  });
-
-  app.get('/tuples',function(req,res){
-    res.render('tuples');
-  });
-
-  app.get('/dictionary',function(req,res){
-    res.render('dictionary');
-  });
-
-  app.get('/date-time',function(req,res){
-    res.render('dictionary');
-  });
-
-  app.get('/functions',function(req,res){
-    res.render('functions');
-  });
-
-  app.get('/modules',function(req,res){
-    res.render('modules');
-  });
-
-  app.get('/fileio',function(req,res){
-    res.render('fileio');
-  });
-
-  app.get('/exceptions',function(req,res){
-    res.render('exceptions');
-  });
-
-  app.get('/class-objects',function(req,res){
-    res.render('class-objects');
-  });
-
-
 //--------------Editor related code---------------
 //--------------do not touch this part------------
-//------------------------------------------------
+
 var data_output = "";
 app.post('/output', function(req,res){
   var data_input = req.body.editor;
@@ -268,24 +261,6 @@ res.send(data_output);
 
 
 //--------------------listning to server(do not touch)------------------------------
-
-//----------adding details to database---------------------
-  app.post("/login-signup",function(req,res){
-    try {
-      const newUser = new Register({
-        Username: req.body.Username,
-        Email: req.body.Email,
-        Password: req.body.Password
-      });
-        newUser.save();
-        res.render("c-editor");
-    } catch (error) {
-      res.status(400).send(error);
-    }
-
-  });
-
-
 app.listen(port, function(){
   console.log(`server running on port ${port}`);
 });
