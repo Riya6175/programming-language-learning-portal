@@ -8,7 +8,7 @@ const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const mongoose = require("mongoose");
 const fs = require("fs");
-<<<<<<< HEAD
+
 app.use(express.json());
 app.set('view engine', 'ejs');
 
@@ -19,10 +19,10 @@ app.use(express.static("public"));
 
 
 
-=======
+
 const cmd = require('node-cmd');
 const jq = require('jquery')
->>>>>>> 6c4e3455155e4b376f09616c3e83b3a0cc7335d8
+
 
 app.use(express.urlencoded({extended:false}));
 
@@ -106,7 +106,7 @@ const port = process.env.PORT || 3000;
     res.render('login-signup');
   });
 
-<<<<<<< HEAD
+
 
   app.get("/editor",function(req,res){
     if(req.isAuthenticated()){
@@ -154,7 +154,7 @@ const port = process.env.PORT || 3000;
   });
 
   
-=======
+
   app.get('/editor',function(req,res){
     res.render('editor');
   });
@@ -219,7 +219,7 @@ const port = process.env.PORT || 3000;
     res.render('class-objects');
   });
 
->>>>>>> 6c4e3455155e4b376f09616c3e83b3a0cc7335d8
+
 //--------------Editor related code---------------
 //--------------do not touch this part------------
 //------------------------------------------------
@@ -256,9 +256,9 @@ res.send(data_output);
 });
   
 
-<<<<<<< HEAD
+
 //--------------------listning to server(do not touch)------------------------------
-=======
+
 //----------adding details to database---------------------
   app.post("/login-signup",function(req,res){
     try {
@@ -275,7 +275,7 @@ res.send(data_output);
 
   });
 
->>>>>>> 6c4e3455155e4b376f09616c3e83b3a0cc7335d8
+
 app.listen(port, function(){
   console.log(`server running on port ${port}`);
 });
