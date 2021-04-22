@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require("mongoose");
 const fs = require("fs");
 const cmd = require('node-cmd');
-
+const jq = require('jquery')
 
 //________________data-base connection-----------------
 mongoose.connect("mongodb://localhost:27017/userDetails", {useNewUrlParser:true,
@@ -89,9 +89,11 @@ app.use(express.urlencoded({extended:false}));
   app.get('/output',function(req,res){
     res.render('output');
   });
+
   app.get('/functions',function(req,res){
     res.render('functions');
   });
+
   app.get('/decision-making',function(req,res){
     res.render('decision-making');
   });
@@ -144,6 +146,17 @@ app.use(express.urlencoded({extended:false}));
     res.render('class-objects');
   });
 
+//--------------------trial code------------------
+
+// app.get('/button_api', function(req, res) {
+
+//   exports.getTeamData = function () {
+//     console.log("yoo")
+// };
+
+// res.send(data);
+// });
+
 
 //--------------Editor related code---------------
 //--------------do not touch this part------------
@@ -187,14 +200,31 @@ app.post('/output', function(req,res){
   cmd.runSync('python code.py');
   cmd.run('python code.py',
   function(err, data, stderr, res){
-    data_output = data;
+    if(stderr)
+    {
+      data_output = stderr;
+    }
+    else{
+      data_output = data;
+    }
+    
   });
   // res.send(data_output);
-  //setTimeout(() => {  res.send(data_output); }, 2000);
-  console.log(data_output)
-});
-  
+  // setTimeout(() => {  res.send(data_output); }, 2000);
 
+  // app.get('/button_api', function(req, res) {
+  //   exports.getTeamData = function () {
+  // };
+  // res.send(data_output);
+  // });
+  
+});
+
+app.get('/button_api', function(req, res) {
+  exports.getTeamData = function () {
+};
+res.send(data_output);
+});
   
 
 //----------adding details to database---------------------

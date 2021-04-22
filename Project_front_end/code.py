@@ -1,4 +1,3 @@
 #Write your code here
-fruits = ["apple", "banana", "cherry"]
-for x in fruits:
+for x in range(20):
   print(x)
