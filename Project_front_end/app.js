@@ -54,13 +54,13 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended:false}));
 
-app.get('/', function(req, res) {
-    res.render('index');
-    });
+  app.get('/', function(req, res) {
+      res.render('index');
+      });
 
-app.get('/home', function(req, res) {
-  res.render('home');
-  });
+  app.get('/home', function(req, res) {
+    res.render('home');
+    });
 
   app.get('/about', function(req, res) {
     res.render('about');
@@ -88,10 +88,10 @@ app.get('/home', function(req, res) {
 
   app.get('/output',function(req,res){
     res.render('output');
-
+  });
   app.get('/functions',function(req,res){
     res.render('functions');
-
+  });
   app.get('/decision-making',function(req,res){
     res.render('decision-making');
   });
@@ -189,7 +189,8 @@ app.post('/output', function(req,res){
   function(err, data, stderr, res){
     data_output = data;
   });
-  res.send(data_output);
+  // res.send(data_output);
+  //setTimeout(() => {  res.send(data_output); }, 2000);
   console.log(data_output)
 });
   
