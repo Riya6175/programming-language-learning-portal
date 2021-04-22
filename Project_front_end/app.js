@@ -146,47 +146,9 @@ app.use(express.urlencoded({extended:false}));
     res.render('class-objects');
   });
 
-//--------------------trial code------------------
-
-// app.get('/button_api', function(req, res) {
-
-//   exports.getTeamData = function () {
-//     console.log("yoo")
-// };
-
-// res.send(data);
-// });
-
-
 //--------------Editor related code---------------
 //--------------do not touch this part------------
-
-// app.post('/output', function(req,res){
-//   var data_input = req.body.editor;
-//   console.log("Going to write into existing file")
-
-//   fs.writeFile('code.py', data_input, function(err) {
-//    if (err) {
-//       return console.error(err);
-//    }
-   
-//     console.log("Data written successfully!");
-//     cmd.runSync('python code.py');
-//     cmd.run('python code.py',
-//         function(err, data, stderr){
-//             app.get('/output',function(req,res){
-//             res.render(data);
-//             });
-//             fs.writeFile('views/output.txt', data, function(err) {
-//               if (err) {
-//                 fs.writeFile('views/output.txt', err)
-//               }
-//             });
-//         });
-//     });
-// });
-
-//-------------------------------------------------------
+//------------------------------------------------
 var data_output = "";
 app.post('/output', function(req,res){
   var data_input = req.body.editor;
@@ -211,13 +173,6 @@ app.post('/output', function(req,res){
   });
   // res.send(data_output);
   // setTimeout(() => {  res.send(data_output); }, 2000);
-
-  // app.get('/button_api', function(req, res) {
-  //   exports.getTeamData = function () {
-  // };
-  // res.send(data_output);
-  // });
-  
 });
 
 app.get('/button_api', function(req, res) {

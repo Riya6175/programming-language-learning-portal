@@ -1,3 +1,2 @@
-#Write your code here
-for x in range(20):
+for x in range(5):
   print(x)
