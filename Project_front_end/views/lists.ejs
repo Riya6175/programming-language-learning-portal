@@ -53,10 +53,20 @@
           When the above code is executed, it produces the following result −
         </p>
         <aside class="code-frame">
-            <p class="content">
-              <span class="comment">#!/usr/bin/python<br /><br />
-              <span class="function">list</span> = [<span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span>];
-              <span class="function">print</span><span class="disptxt">"Value available at index 2 : "</span><br />
+          <p class="content">
+              List1[0]: physics<br />
+              list2[1:5]: [2, 3, 4, 5]<br />
+          </p>
+        </aside>
+        <h3 class="subtitle">Updating Lists</h3>
+        <p class="content">
+            You can update single or multiple elements of lists by giving the slice on the left-hand side of the assignment operator, and you can add to elements in a list with the append() method. For example −
+        </p>
+        <aside class="code-frame">
+            <p class="code">
+              <span class="comment">#!/usr/bin/python<br /><br /> </span>
+              <span class="function">list</span> = [<span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span>]; <br />
+              <span class="function">print</span><span class="disptxt">" Value available at index 2 : "</span><br />
               <span class="function">print</span><span class="filename"> list</span>[<span class="disptxt">2</span>]<br />
               <span class="filename">list</span>[<span class="disptxt">2</span>] = <span class="disptxt">2001</span>;<br />
               <span class="function">print</span><span class="disptxt"> "New value available at index 2 : "</span><br />
@@ -71,10 +81,10 @@
         </p>
         <aside class="code-frame">
           <p class="content">
-              <span class="filename">Value available at index 2 :</span><br />
-              <span class="filename">1997</span><br />
-              <span class="filename">New value available at index 2 :</span><br />
-              <span class="filename">2001</span><br />
+              Value available at index 2 :<br />
+              1997<br />
+              New value available at index 2 :<br />
+              2001<br />
           </p>
         </aside>
         <h3 class="subtitle">Delete List Elements</h3>
@@ -96,9 +106,9 @@
         </p>
         <aside class="code-frame">
             <p class="content">
-                <span class="filename">['physics', 'chemistry', 1997, 2000]</span><br />
-                <span class="filename">After deleting value at index 2 :</span>
-                <span class="filename">['physics', 'chemistry', 2000]</span><br />
+                ['physics', 'chemistry', 1997, 2000]<br />
+                After deleting value at index 2 :<br />
+                ['physics', 'chemistry', 2000]<br />
             </p>
         </aside>
         <p class="content">
