@@ -1,6 +1,6 @@
 <%- include("partials/header") -%>
 <%- include("partials/side-nav") -%>
-    
+
     <section class="ftco-content">
         <h2 class="page-title"> Python- Variable Types</h2>
         <nav class="links">
@@ -14,12 +14,12 @@
         <p class="content">
             Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables, you can store integers, decimals or characters in these variables.
         </p>
-        
+
         <h3 class="subtitle">Assigning Values to Variables</h3>
         <p class="content">
             Python variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable. The equal sign (=) is used to assign values to variables.
         </p>
-          
+
         <p class="content">
             The operand to the left of the = operator is the name of the variable and the operand to the right of the = operator is the value stored in the variable. For example −
         </p>
@@ -33,11 +33,11 @@
                 <span class="function">print </span> <span class="">counter</span><br>
                 <span class="function">print </span> <span class="">miles</span><br>
                 <span class="function">print </span> <span class="">name</span><br>
-               
+
             </p>
         </aside>
-        
-        
+
+
         <p class="content">
             Here, 100, 1000.0 and "John" are the values assigned to counter, miles, and name variables, respectively. This produces the following result −
         </p>
@@ -52,7 +52,7 @@
         </p>
         <aside class="code-frame">
             <span class="">  a = b = c = 1</span><br>
-        </aside>   
+        </aside>
         <p class="content">
             Here, an integer object is created with the value 1, and all three variables are assigned to the same memory location. You can also assign multiple objects to multiple variables. For example −
         </p>
@@ -73,9 +73,9 @@
             <li>List</li>
             <li>Tuple</li>
             <li>Dictionary</li>
-        </ul>   
+        </ul>
         <h3 class="subtitle">Python Numbers</h3>
-        
+
         <p class="content">
             Number data types store numeric values. Number objects are created when you assign a value to them. For example −
         </p>
@@ -83,8 +83,8 @@
             <span class=""> var1 = 1</span><br>
             <span class=""> var2 = 10</span><br>
         </aside>
-       
-       
+
+
         <p class="content">
             You can also delete the reference to a number object by using the del statement. The syntax of the del statement is −
         </p>
@@ -104,7 +104,7 @@
             <li>long (long integers, they can also be represented in octal and hexadecimal)</li>
             <li>float (floating point real values)</li>
             <li>complex (complex numbers)</li>
-            
+
         </ul>
    <h4>Examples</h4>
    <p class="content">
@@ -147,18 +147,18 @@
         <td class ="td">-90.</td>
         <td class ="td">-.6545+0J</td>
     </tr>
-   
+
 </table>
 <ul class="content-bulletlist">
     <li>Python allows you to use a lowercase l with long, but it is recommended that you use only an uppercase L to avoid confusion with the number 1. Python displays long integers with an uppercase L.</li>
     <li>A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, where x and y are the real numbers and j is the imaginary unit.
 
     </li>
-   
-    
+
+
 </ul>
 <h3 class="subtitle">Python Strings</h3>
-        
+
         <p class="content">
             Strings in Python are identified as a contiguous set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.
         </p>
@@ -295,8 +295,8 @@
         <span class="function">print </span><span class="">tinydict.keys</span><span class="brackets">()</span> <span class="comments">  # Prints all the keys</span> <br>
         <span class="function">print </span><span class="">tinydict.values</span><span class="brackets">()</span><span class="comments"> # Prints all the values</span> <br>
 
-    
-       
+
+
     </p>
 </aside>
 <p class="content">
@@ -336,8 +336,8 @@
         <td class ="td">Evaluates to true if it does not finds a variable in the specified sequence and false otherwise.</td>
         <td class ="td">x not in y, here not in results in a 1 if x is not a member of sequence y.</td>
     </tr>
-    
-   
+
+
 </table>
 <h3 class="subtitle">Python Identity Operators</h3>
 <p class="content">
@@ -359,8 +359,8 @@
         <td class ="td">Evaluates to false if the variables on either side of the operator point to the same object and true otherwise.</td>
         <td class ="td">x is not y, here is not results in 1 if id(x) is not equal to id(y).</td>
     </tr>
-    
-   
+
+
 </table>
 <h3 class="subtitle">Python Operators Precedence</h3>
 <p class="content">
@@ -370,21 +370,21 @@
     <tr class="tr">
         <th class="th">Sr.No.</th>
         <th class="th">Function & Description</th>
-        
+
     </tr>
     <tr  class="tr">
         <td class ="td">1</td>
         <td class ="td"><b>int(x [,base])</b><br>
 
             Converts x to an integer. base specifies the base if x is a string.</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">2</td>
         <td class ="td"><b>long(x [,base] )</b><br>
 
             Converts x to a long integer. base specifies the base if x is a string.</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">3</td>
@@ -396,70 +396,70 @@
         <td class ="td"><b>complex(real [,imag])</b><br>
 
             Creates a complex number.</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">5</td>
         <td class ="td"><b>str(x)</b><br>
 
             Converts object x to a string representation.</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">6</td>
         <td class ="td"><b>repr(x)</b><br>
 
             Converts object x to an expression string.</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">7</td>
         <td class ="td"><b>eval(str)</b><br>
 
             Evaluates a string and returns an object.</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">8</td>
         <td class ="td"><b>tuple(s)</b><br>
 
             Converts s to a tuple.</td>
-     
+
     </tr>
     <tr class="tr">
         <td class ="td">9</td>
         <td class ="td"><b>list(s)</b><br>
 
             Converts s to a list.</td>
-      
+
     </tr>
     <tr class="tr">
         <td class ="td">10</td>
         <td class ="td"><b>set(s)</b><br>
 
             Converts s to a set.</td>
-       
+
     </tr>
-    
+
     <tr class="tr">
         <td class ="td">11</td>
         <td class ="td"><b>dict(d)</b><br>
 
             Creates a dictionary. d must be a sequence of (key,value) tuples.</td>
-       
+
     </tr>
-    
+
     <tr class="tr">
         <td class ="td">12</td>
-        <td class ="td"><b>	
+        <td class ="td"><b>
             frozenset(s)</b><br>
 
             Converts s to a frozen set.</td>
-       
+
     </tr>
-    
-   
-</table> 
+
+
+</table>
 <nav class="page-links">
     <button class="btn-pglinks" onclick="location.href='/basic-syntax'"><i class="fa fa-angle-left"></i>Previous Page</button>
     <button class="btn-pglinks">PDF Preview</button>

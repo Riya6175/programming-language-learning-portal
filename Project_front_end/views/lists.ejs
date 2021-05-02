@@ -26,9 +26,9 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="filename">list1</span> = <span class="filename">['physics', 'chemistry', 1997, 2000];</span><br />
-                <span class="filename">list2</span> = <span class="filename">[1, 2, 3, 4, 5 ];</span><br />
-                <span class="filename">list3</span> = <span class="filename">["a", "b", "c", "d"]</span><br />
+                <span class="function">list1</span> = <span class="brackets">[</span><span class="disptxt">'physics', 'chemistry', 1997, 2000</span><span class="brackets">]</span>;<br />
+                <span class="function">list2</span> = <span class="brackets">[</span><span class="disptxt">1, 2, 3, 4, 5</span><span class="brackets">]</span>;<br />
+                <span class="function">list3</span> = <span class="brackets">[</span><span class="disptxt">"a", "b", "c", "d"</span><span class="brackets">]</span><br />
 
             </p>
         </aside>
@@ -41,12 +41,12 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="comment">#!/usr/bin/python<br /><br /> </span><span class="filename">list1</span> = [
-                <span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span>]; <br />
-                <span class="filename">list1</span> = [<span class="disptxt">1</span>, <span class="disptxt">2</span>, <span class="disptxt">3</span>, <span class="disptxt">4</span>,
-                 <span class="disptxt">5</span>, <span class="disptxt">6</span>];<br />
-                <span class="filename">print</span> <span class="disptxt">"list1[0]: "</span>, <span class="filename">list1</span>[<span class="disptxt">0</span>]<br />
-                <span class="filename">print</span> <span class="disptxt">"list2[1:5]: "</span>, <span class="filename">list2</span>[<span class="disptxt">1:5</span>]<br />
+                <span class="comment">#!/usr/bin/python<br /><br /> </span><span class="function">list1</span> = <span class="brackets">[</span>
+                <span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span><span class="brackets">]</span>; <br />
+                <span class="function">list1</span> = <span class="brackets">[</span><span class="filename">1</span>, <span class="filename">2</span>, <span class="filename">3</span>, <span class="filename">4</span>,
+                 <span class="filename">5</span>, <span class="filename">6</span><span class="brackets">]</span>;<br />
+                <span class="function">print</span> <span class="disptxt">"list1[0]: "</span>, <span class="function">list1</span><span class="brackets">[</span><span class="filename">0</span><span class="brackets">]</span><br />
+                <span class="function">print</span> <span class="disptxt">"list2[1:5]: "</span>, <span class="function">list2</span><span class="brackets">[</span><span class="filename">1:5</span><span class="brackets">]</span><br />
             </p>
         </aside>
         <p class="content">
@@ -65,12 +65,12 @@
         <aside class="code-frame">
             <p class="code">
               <span class="comment">#!/usr/bin/python<br /><br /> </span>
-              <span class="function">list</span> = [<span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span>]; <br />
+              <span class="function">list</span> = <span class="brackets">[</span><span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span><span class="brackets">]</span>; <br />
               <span class="function">print</span><span class="disptxt">" Value available at index 2 : "</span><br />
-              <span class="function">print</span><span class="filename"> list</span>[<span class="disptxt">2</span>]<br />
-              <span class="filename">list</span>[<span class="disptxt">2</span>] = <span class="disptxt">2001</span>;<br />
+              <span class="function">print</span><span class="function"> list</span><span class="brackets">[</span><span class="filename">2</span><span class="brackets">]</span><br />
+              <span class="function">list</span><span class="brackets">[</span><span class="filename">2</span><span class="brackets">]</span> = <span class="filename">2001</span>;<br />
               <span class="function">print</span><span class="disptxt"> "New value available at index 2 : "</span><br />
-              <span class="function">print</span><span class="filename"> list</span>[<span class="disptxt">2</span>]
+              <span class="function">print</span><span class="function"> list</span><span class="brackets">[</span><span class="filename">2</span><span class="brackets">]</span>
               </p>
         </aside>
         <p class="content">
@@ -94,11 +94,11 @@
         <aside class="code-frame">
           <p class="code">
           <span class="comment">#!/usr/bin/python<br /><br />
-          <span class="function">list</span> = [<span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span>];<br />
-          <span class="function">print</span><span class="filename"> list1</span><br />
-          <span class="function">del</span><span class="filename"> list1</span>[<span class="disptxt">2</span>]<br />
+          <span class="function">list</span> = <span class="brackets">[</span><span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span><span class="brackets">]</span>;<br />
+          <span class="function">print</span><span class="function"> list1</span><br />
+          <span class="function">del</span><span class="function"> list1</span><span class="brackets">[</span><span class="filename">2</span><span class="brackets">]</span><br />
           <span class="function">print</span><span class="disptxt"> print "After deleting value at index 2 : "</span><br />
-          <span class="function">print</span><span class="filename"> list1</span>
+          <span class="function">print</span><span class="function"> list1</span>
           </p>
         </aside>
         <p class="content">

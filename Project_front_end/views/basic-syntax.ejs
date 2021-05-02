@@ -1,6 +1,6 @@
 <%- include("partials/header") -%>
 <%- include("partials/side-nav") -%>
-    
+
     <section class="ftco-content">
         <h2 class="page-title">Basic Syntax Python</h2>
         <nav class="links">
@@ -11,24 +11,24 @@
         <p class="content">
             The Python language has many similarities to Perl, C, and Java. However, there are some definite differences between the languages
         </p>
-        
+
         <h3 class="subtitle">First Python Program</h3>
         <p class="content">
             Let us execute programs in different modes of programming.
         </p>
-        <h4> Interactive Mode Programming</h4>   
+        <h4> Interactive Mode Programming</h4>
         <p class="content">
-            Invoking the interpreter without passing a script file as a parameter brings up the following prompt −     
+            Invoking the interpreter without passing a script file as a parameter brings up the following prompt −
         </p>
-        
+
         <aside class="code-frame">
             <p class="code">
-                <span class=""> $ python</span><br> 
+                <span class=""> $ python</span><br>
                 <span class="filename"> Python</span><span class=""> 2.4.3</span> <span class="brackets">(</span><span class="">#1, Nov 11 2010, 13:34:43</span><span class="brackets">)</span><br>
                 <span class="disptxt">[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2</span><br>
                 <span class="disptxt"> Type "help", "copyright", "credits" or "license" for more information.</span><br>
                 <span class="filename"> >>> </span>
-                   
+
             </p>
         </aside>
         <p class="content">
@@ -36,16 +36,16 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="filename">>>> </span><span class="function">print</span> <span class="disptxt">"Hello, Python!"</span><br> 
+                <span class="filename">>>> </span><span class="function">print</span> <span class="disptxt">"Hello, Python!"</span><br>
                 </span>
-                   
+
             </p>
         </aside>
         <p class="content">
             If you are running new version of Python, then you would need to use print statement with parenthesis as in print ("Hello, Python!");. However in Python version 2.4.3, this produces the following result −
         </p>
         <aside class="code-frame">
-                <span class="comment">"Hello, Python!"</span><br> 
+                <span class="comment">"Hello, Python!"</span><br>
                 </span>
         </aside>
         <h4>Script Mode Programming</h4>
@@ -57,9 +57,9 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">print </span><span class="disptxt">"Hello, Python!"</span><br> 
+                <span class="function">print </span><span class="disptxt">"Hello, Python!"</span><br>
                 </span>
-                   
+
             </p>
         </aside>
         <p class="content">
@@ -70,7 +70,7 @@
                 <span class="function">$ chmod +x test.py </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="brackets"> # This is to make file executable </span><br>
                 <span class="function">$./test.py</span>
                 </span>
-                   
+
             </p>
         </aside>
         <p class="content">
@@ -78,9 +78,9 @@
         </p>
         <aside class="code-frame">
             <!-- <p class="code"> -->
-                <span class="comment">"Hello, Python!"</span><br> 
+                <span class="comment">"Hello, Python!"</span><br>
                 <!-- </span>
-                   
+
             </p> -->
         </aside>
         <h4>Python Identifiers</h4>
@@ -96,47 +96,47 @@
             <li>Starting an identifier with a single leading underscore indicates that the identifier is private.</li>
             <li>Starting an identifier with two leading underscores indicates a strongly private identifier.</li>
             <li>If the identifier also ends with two trailing underscores, the identifier is a language-defined special name.</li>
-            
+
         </ul>
    <h4>Reserved Words</h4>
    <p class="content">
     The following list shows the Python keywords. These are reserved words and you cannot use them as constant or variable or any other identifier names. All the Python keywords contain lowercase letters only.
 </p>
 <table class="content-table">
-    
+
     <tr  class="tr">
         <td class ="td">and</td>
         <td class ="td">exec</td>
         <td class ="td">not</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">assert</td>
         <td class ="td">finally</td>
         <td class ="td">or</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">break</td>
         <td class ="td">for</td>
         <td class ="td">pass</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">class</td>
         <td class ="td">from</td>
         <td class ="td">print</td>
-     
+
     </tr>
     <tr  class="tr">
         <td class ="td">continue</td>
         <td class ="td">global</td>
         <td class ="td">raise</td>
-     
+
     </tr>
-   
-   
-</table> 
+
+
+</table>
 <h4>Lines and Indentation</h4>
 <p class="content">
     Python provides no braces to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation, which is rigidly enforced.
@@ -159,12 +159,12 @@
         <span class="function">if True:</span><br>
         <span class="function">  print </span><span class="disptxt">"Answer" </span><br>
         <span class="function">  print </span> <span class="disptxt">"True" </span><br>
-        <span class="function">  else:</span><br> 
+        <span class="function">  else:</span><br>
         <span class="function"> print</span> <span class="disptxt"> "Answer" </span><br>
         <span class="function"> print </span><span class="disptxt">"False" </span><br>
-       
-       
-           
+
+
+
     </p>
 </aside>
 <p class="content">
@@ -176,13 +176,13 @@
 </p>
 <aside class="code-frame">
     <p class="code">
-       <span class="comment">#!/usr/bin/python</span><br><br> 
+       <span class="comment">#!/usr/bin/python</span><br><br>
 
        <span class="function"> import </span> <span class="" >sys</span><br><br>
 
         <span class="function">try </span>:<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># open file stream</span><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">file <span class="brackets">=</span> open<span class="brackets">(</span>file_name, </span><span class="disptxt">"w"</span> <span class="brackets">)</span><br> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">file <span class="brackets">=</span> open<span class="brackets">(</span>file_name, </span><span class="disptxt">"w"</span> <span class="brackets">)</span><br>
         <span class="function">except</span> <span class="filename">IOError:</span><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span> <span class="disptxt">"There was an error writing to"</span><span class="">, file_name</span><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">sys.</span><span class="function">exit</span><span class="brackets">()</span><br>
@@ -215,7 +215,7 @@
 <p class="content">
     Statements in Python typically end with a new line. Python does, however, allow the use of the line continuation character (\) to denote that the line should continue. For example −
 </p>
-<aside class="code-frame">        
+<aside class="code-frame">
        <span class=""> total = item_one + \</span><br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=""> item_two + \</span><br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=""> item_three</span><br>
@@ -223,7 +223,7 @@
 <p class="content">
     Statements contained within the [], {}, or () brackets do not need to use the line continuation character. For example −
 </p>
-<aside class="code-frame">        
+<aside class="code-frame">
        <span class=""> days = ['Monday', 'Tuesday', 'Wednesday',</span><br>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=""> 'Thursday', 'Friday']</span><br>
 </aside>
@@ -245,10 +245,10 @@
     A hash sign (#) that is not inside a string literal begins a comment. All characters after the # and up to the end of the physical line are part of the comment and the Python interpreter ignores them.
 </p>
 <aside class="code-frame">
-    <p class="code">   
+    <p class="code">
 <span class="comments"> #!/usr/bin/python</span><br><br>
 <span class="comments"> # First comment</span><br>
-        <span class="function">print </span><span class="disptxt">"Hello, Python!" </span><span class="comment"># second comment</span><br>           
+        <span class="function">print </span><span class="disptxt">"Hello, Python!" </span><span class="comment"># second comment</span><br>
     </p>
 </aside>
 <p class="content">
@@ -260,13 +260,13 @@
 <p class="content">
     You can type a comment on the same line after a statement or expression −
 </p>
-<aside class="code-frame">        
+<aside class="code-frame">
        <span class="">name = "Madisetti" # This is again comment</span><br>
 </aside>
 <p class="content">
     You can comment multiple lines as follows −
 </p>
-<aside class="code-frame">        
+<aside class="code-frame">
        <span class=""># This is a comment.</span><br>
        <span class=""># This is a comment, too.</span><br>
        <span class=""># This is a comment, too.</span><br>
@@ -275,7 +275,7 @@
 <p class="content">
     Following triple-quoted string is also ignored by Python interpreter and can be used as a multiline comments:
 </p>
-<aside class="code-frame">        
+<aside class="code-frame">
        <span class="">'''</span><br>
        <span class="">This is a multiline</span><br>
        <span class="">comment.</span><br>
@@ -294,7 +294,7 @@
 </p>
 <aside class="code-frame">
     <p class="code">
-       <span class="comment">#!/usr/bin/python</span><br><br>    
+       <span class="comment">#!/usr/bin/python</span><br><br>
        <span class="">raw_input</span><span class="brackets">(</span><span class="disptxt">"\n\nPress the enter key to exit."</span><span class="brackets">)</span><br>
     </p></aside>
 <p class="content">

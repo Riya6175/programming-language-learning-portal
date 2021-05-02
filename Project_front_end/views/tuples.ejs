@@ -19,9 +19,9 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="filename">tup1</span> = <span class="filename">('physics', 'chemistry', 1997, 2000);</span><br />
-                <span class="filename">tup2</span> = <span class="filename">(1, 2, 3, 4, 5 );</span><br />
-                <span class="filename">tup3</span> = <span class="filename">"a", "b", "c", "d";</span><br />
+                <span class="function">tup1</span> = <span class="brackets">(</span><span class="disptxt">'physics', 'chemistry', 1997, 2000<span class="brackets">)</span>;<br />
+                <span class="function">tup2</span> = <span class="brackets">(</span><span class="filename">1, 2, 3, 4, 5 </span><span class="brackets">)</span>;<br />
+                <span class="function">tup3</span> = <span class="disptxt">"a", "b", "c", "d";</span><br />
 
             </p>
         </aside>
@@ -30,7 +30,7 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="filename">tup1</span> = <span class="filename">();</span><br />
+                <span class="function">tup1</span> = <span class="brackets">()</span>;<br />
             </p>
         </aside>
         <p class="content">
@@ -38,7 +38,7 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="filename">tup1</span> = <span class="filename">(50,);</span><br />
+                <span class="function">tup1</span> = <span class="brackets">(</span><span class="filename">50</span>,<span class="brackets">)</span>;<br />
             </p>
         </aside>
         <p class="content">
@@ -50,12 +50,12 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="comment">#!/usr/bin/python<br /><br /> </span><span class="filename">tup1</span> = (
-                <span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span>); <br />
-                <span class="filename">tup2</span> = (<span class="disptxt">1</span>, <span class="disptxt">2</span>, <span class="disptxt">3</span>, <span class="disptxt">4</span>,
-                 <span class="disptxt">5</span>, <span class="disptxt">6</span>);<br />
-                <span class="filename">print</span> <span class="disptxt">"tup1[0]: "</span>, <span class="filename">tup1</span>[<span class="disptxt">0</span>];<br />
-                <span class="filename">print</span> <span class="disptxt">"tup2[1:5]: "</span>, <span class="filename">tup2</span>[<span class="disptxt">1:5</span>];<br />
+                <span class="comment">#!/usr/bin/python<br /><br /> </span><span class="function">tup1</span> = <span class="brackets">(</span>
+                <span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span><span class="brackets">)</span>; <br />
+                <span class="function">tup2</span> = <span class="brackets">(</span><span class="filename">1</span>, <span class="filename">2</span>, <span class="filename">3</span>, <span class="filename">4</span>,
+                 <span class="filename">5</span>, <span class="filename">6</span><span class="brackets">)</span>;<br />
+                <span class="function">print</span> <span class="disptxt">"tup1[0]: "</span>, <span class="function">tup1</span><span class="brackets">[</span><span class="filename">0</span><span class="brackets">]</span>;<br />
+                <span class="function">print</span> <span class="disptxt">"tup2[1:5]: "</span>, <span class="function">tup2</span><span class="brackets">[</span><span class="filename">1</span>:<span class="filename">5</span><span class="brackets">]</span>;<br />
             </p>
         </aside>
         <p class="content">
@@ -74,13 +74,13 @@
         <aside class="code-frame">
             <p class="code">
               <span class="comment">#!/usr/bin/python<br /><br />
-              <span class="filename">tup1</span> = (<span class="function">12</span>, <span class="function">34.56</span>);<br />
-              <span class="filename">tup2</span> = (<span class="disptxt">'abc'</span>, <span class="disptxt">'xyz'</span>);<br /><br />
+              <span class="function">tup1</span> = <span class="brackets">(</span><span class="filename">12</span>, <span class="filename">34.56</span><span class="brackets">)</span>;<br />
+              <span class="function">tup2</span> = <span class="brackets">(</span><span class="disptxt">'abc'</span>, <span class="disptxt">'xyz'</span><span class="brackets">)</span>;<br /><br />
               <span class="comment"># Following action is not valid for tuples<br />
               <span class="comment"># tup1[0] = 100;<br /><br />
               <span class="comment"># So let's create a new tuple as follows<br /><br />
-              <span class="filename">tup3 = tup1 + tup2;</span><br />
-              <span class="function">print</span><span class="filename"> tup3;</span>
+              <span class="function">tup3 = tup1 + tup2;</span><br />
+              <span class="function">print</span><span class="function"> tup3;</span>
               </p>
         </aside>
         <p class="content">
@@ -101,11 +101,11 @@
         <aside class="code-frame">
           <p class="code">
           <span class="comment">#!/usr/bin/python<br /><br />
-          <span class="function">tup</span> = (<span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span>);<br />
-          <span class="function">print</span><span class="filename"> tup;</span><br />
-          <span class="function">del</span><span class="filename"> tup;</span><br />
+          <span class="function">tup</span> = <span class="brackets">(</span><span class="disptxt">'physics'</span>, <span class="disptxt">'chemistry'</span>, <span class="disptxt">1997</span>, <span class="disptxt">2000</span><span class="brackets">)</span>;<br />
+          <span class="function">print</span><span class="function"> tup;</span><br />
+          <span class="function">del</span><span class="function"> tup;</span><br />
           <span class="function">print</span><span class="disptxt"> "After deleting tup : "</span>;<br />
-          <span class="function">print</span><span class="filename"> tup;</span>
+          <span class="function">print</span><span class="function"> tup;</span>
           </p>
         </aside>
         <p class="content">

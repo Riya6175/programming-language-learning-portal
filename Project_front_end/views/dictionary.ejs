@@ -23,10 +23,10 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="comment">#!/usr/bin/python<br /><br /> </span><span class="filename">dict</span> = {
-                <span class="disptxt">'Name'</span>: <span class="disptxt">'Zara'</span>, <span class="disptxt">'Age'</span>: <span class="disptxt">7</span>, <span class="disptxt">'Class'</span>: <span class="disptxt">'First'</span>}<br />
-                <span class="function">print</span> <span class="disptxt">"dict['Name']: "</span>, <span class="filename">dict</span>[<span class="disptxt">'Name'</span>]<br />
-                <span class="function">print</span> <span class="disptxt">"dict['Age']: "</span>, <span class="filename">dict</span>[<span class="disptxt">'Age'</span>]<br />
+                <span class="comment">#!/usr/bin/python<br /><br /> </span><span class="function">dict</span> = <span class="brackets">{</span>
+                <span class="disptxt">'Name'</span>: <span class="disptxt">'Zara'</span>, <span class="disptxt">'Age'</span>: <span class="filename">7</span>, <span class="disptxt">'Class'</span>: <span class="disptxt">'First'</span><span class="brackets">}</span><br />
+                <span class="function">print</span> <span class="disptxt">"dict['Name']: "</span>, <span class="function"> dict</span><span class="brackets">[</span><span class="disptxt">'Name'</span><span class="brackets">]</span><br />
+                <span class="function">print</span> <span class="disptxt">"dict['Age']: "</span>, <span class="function"> dict</span><span class="brackets">[</span><span class="disptxt">'Age'</span><span class="brackets">]</span><br />
             </p>
         </aside>
         <p class="content">
@@ -43,9 +43,9 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-              <span class="comment">#!/usr/bin/python<br /><br /> </span><span class="filename">dict</span> = {
-              <span class="disptxt">'Name'</span>: <span class="disptxt">'Zara'</span>, <span class="disptxt">'Age'</span>: <span class="disptxt">7</span>, <span class="disptxt">'Class'</span>: <span class="disptxt">'First'</span>}<br />
-              <span class="function">print</span> <span class="disptxt">"dict['Alice']: "</span>, <span class="filename">dict</span>[<span class="disptxt">'Alice'</span>]<br />
+              <span class="comment">#!/usr/bin/python<br /><br /> </span><span class="function">dict</span> = <span class="brackets">{</span>
+              <span class="disptxt">'Name'</span>: <span class="disptxt">'Zara'</span>, <span class="disptxt">'Age'</span>: <span class="filename">7</span>, <span class="disptxt">'Class'</span>: <span class="disptxt">'First'</span><span class="brackets">}</span><br />
+              <span class="function">print</span> <span class="disptxt">"dict['Alice']: "</span>, <span class="function">dict</span><span class="brackets">[</span><span class="disptxt">'Alice'</span><span class="brackets">]</span><br />
             </p>
         </aside>
         <p class="content">
@@ -67,12 +67,12 @@
         <aside class="code-frame">
             <p class="code">
               <span class="comment">#!/usr/bin/python<br /><br />
-              <span class="filename">dict</span> = {
-              <span class="disptxt">'Name'</span>: <span class="disptxt">'Zara'</span>, <span class="disptxt">'Age'</span>: <span class="disptxt">7</span>, <span class="disptxt">'Class'</span>: <span class="disptxt">'First'</span>}<br />
-              <span class="filename">dict</span>[<span class="disptxt">'Age'</span>] = <span class="disptxt">8</span>; <span class="comment"># update existing entry<br />
-              <span class="filename">dict</span>[<span class="disptxt">'School'</span>] = <span class="disptxt">"DPS School"</span>; <span class="comment"># Add new entry<br />
-              <span class="function">print</span> <span class="disptxt"> "dict['Age']: "</span>, <span class="filename">dict</span>[<span class="disptxt">'Age'</span>]<br />
-              <span class="function">print</span> <span class="disptxt"> "dict['School']: "</span>, <span class="filename">dict</span>[<span class="disptxt">'School'</span>]<br />
+              <span class="function">dict</span> =<span class="brackets"> {</span>
+              <span class="disptxt">'Name'</span>: <span class="disptxt">'Zara'</span>, <span class="disptxt">'Age'</span>: <span class="filename">7</span>, <span class="disptxt">'Class'</span>: <span class="disptxt">'First'</span><span class="brackets">}</span><br />
+              <span class="function">dict</span><span class="brackets">[</span><span class="disptxt">'Age'</span><span class="brackets">]</span> = <span class="filename">8</span>; <span class="comment"># update existing entry<br />
+              <span class="function">dict</span><span class="brackets">[</span><span class="disptxt">'School'</span><span class="brackets">]</span> = <span class="disptxt">"DPS School"</span>; <span class="comment"># Add new entry<br />
+              <span class="function">print</span> <span class="disptxt"> "dict['Age']: "</span>, <span class="function">dict</span><span class="brackets">[</span><span class="disptxt">'Age'</span><span class="brackets">]</span><br />
+              <span class="function">print</span> <span class="disptxt"> "dict['School']: "</span>, <span class="function">dict</span><span class="brackets">[</span><span class="disptxt">'School'</span><span class="brackets">]</span><br />
               </p>
         </aside>
         <p class="content">
@@ -94,13 +94,13 @@
         <aside class="code-frame">
           <p class="code">
           <span class="comment">#!/usr/bin/python<br /><br />
-          <span class="filename">dict</span> = {
-          <span class="disptxt">'Name'</span>: <span class="disptxt">'Zara'</span>, <span class="disptxt">'Age'</span>: <span class="disptxt">7</span>, <span class="disptxt">'Class'</span>: <span class="disptxt">'First'</span>}<br />
-          <span class="function">del</span><span class="filename"> dict</span>[<span class="disptxt">'Name'</span>]<span class="comment"> # remove entry with key 'Name'<br />
-          <span class="filename">dict.clear();</span><span class="comment"> # remove all entries in dict<br />
-          <span class="function">del</span><span class="filename"> dict </span>;<br /><span class="comment"> # delete entire dictionary<br />
-            <span class="function">print</span> <span class="disptxt"> "dict['Age']: "</span>, <span class="filename">dict</span>[<span class="disptxt">'Age'</span>]<br />
-            <span class="function">print</span> <span class="disptxt"> "dict['School']: "</span>, <span class="filename">dict</span>[<span class="disptxt">'School'</span>]<br />
+          <span class="function">dict</span> = <span class="brackets">{</span>
+          <span class="disptxt">'Name'</span>: <span class="disptxt">'Zara'</span>, <span class="disptxt">'Age'</span>: <span class="filename">7</span>, <span class="disptxt">'Class'</span>: <span class="disptxt">'First'</span><span class="brackets">}</span><br />
+          <span class="function">del</span><span class="function"> dict</span><span class="brackets">[</span><span class="disptxt">'Name'</span><span class="brackets">]</span><span class="comment"> # remove entry with key 'Name'<br />
+          <span class="function">dict.clear<span class="brackets">()</span></span>;<span class="comment"> # remove all entries in dict<br />
+          <span class="function">del</span><span class="function"> dict </span>;<br /><span class="comment"> # delete entire dictionary<br />
+          <span class="function">print</span> <span class="disptxt"> "dict['Age']: "</span>, <span class="function">dict</span><span class="brackets">[</span><span class="disptxt">'Age'</span><span class="brackets">]</span><br />
+          <span class="function">print</span> <span class="disptxt"> "dict['School']: "</span>, <span class="function">dict</span><span class="brackets">[</span><span class="disptxt">'School'</span><span class="brackets">]</span><br />
           </p>
         </aside>
         <p class="content">
