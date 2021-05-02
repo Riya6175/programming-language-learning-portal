@@ -31,12 +31,49 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+const cookieSession = require('cookie-session');
+// const GoogleStrategy = require('passport-google-oauth2').Strategy;
+const { createBrotliCompress } = require('zlib');
+require('./passport-setup');
+
+
 //________________data-base connection-----------------
 mongoose.connect("mongodb+srv://Riya_06:Riy@6175@atlas@cluster0.mnab0.mongodb.net/userDetails?retryWrites=true/userDetails", {useNewUrlParser:true,
 useUnifiedTopology: true,
 useCreateIndex:true
 });
 mongoose.set("useCreateIndex",true);
+
+//--------------registeration user scehma for Google Auth------------------
+
+app.get('/google',passport.authenticate('google',{ scope : ['profile','email']}));
+
+app.get('/google/callback', passport.authenticate('google', { failureRedirect: '/failed' }),
+  function(req, res) {
+    // Successful authenticat ion, redirect home.
+    res.redirect('/editor');
+  }
+);
+
+//--------------registeration user scehma for LinkedIn Auth------------------
+
+app.get('/linkedin', passport.authenticate('linkedin', { scope: ['r_emailaddress', 'r_liteprofile'],}));
+
+app.get('/linkedin/callback',passport.authenticate('linkedin', { failureRedirect: '/failed'}),
+  function(req,res){
+    res.redirect('/editor');
+});
+
+//--------------registeration user scehma for Github Auth------------------
+
+app.get('/github', passport.authenticate('github', { scope: ['user:email'],}));
+
+app.get('/github/callback',passport.authenticate('github', { failureRedirect: '/failed'}),
+  function(req,res){
+    res.redirect('/editor');
+});
+
+
 //--------------registeration user scehma------------------
 const userSchema = new mongoose.Schema({
   username: {
