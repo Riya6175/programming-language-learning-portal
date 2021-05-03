@@ -61,6 +61,7 @@ a.navbar-brand.logo{
 }
 .dropdown {
   list-style: none;
+  overflow: hidden;
 }
 
 .dropdown .nav-link {
@@ -156,7 +157,7 @@ border:none !important;
 }
 
 .sidenav {
-position: fixed;
+position: absolute;
 margin-top: 100px;
 height: 22.5%;
 width: 300px;
@@ -209,55 +210,56 @@ margin-left: 200px; /* Same as the width of the sidenav */
 
 }
 
-.banner {
+.homepage{
   position: relative;
-  margin-top: 68px;
-  height: 91.5vh;
-  background-repeat: no-repeat;
+  height: 750px;
+  z-index: 0;
+}
+
+.homepage .slider-item {
+  margin-top: 66px;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 750px;
+  position: relative;
+  z-index: 0;
 }
 
-.banner .overlay{
-    position: absolute;
-    height: 91.5vh;
-    margin-top: 68px;
-    bottom: 0;
-    left:0;
-    right: 0;
-    background: #000000;
-    opacity: 0.8;
-    height: 100vh;
-}
-
-.banner .text .subheading.title{
-  top: 36%;
-  right: 36%;
+.homepage .slider-item .overlay {
   position: absolute;
-  justify-content: center;
-  font-size: 90px;
-  color: #1687a7;
-  font-weight: 600;
-  margin-bottom: 0;
-  line-height: 1;
-  font-family: 'Poppins', sans-serif;
-  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  background: #000000;
+  opacity: 0.7;
 }
 
-.banner .text .subheading.subtitle{
-  top: 48%;
-  right: 23%;
-  position: absolute;
-  font-size: 50px;
+.homepage .slider-item .slider-text {
   color: #ffffff;
-  font-weight: 600;
-  margin-bottom: 0;
-  line-height: 1.5;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-  z-index: 1;
+  height: 750px;
+  text-align: right;
+}
+
+.homepage .slider-text .subheading{
+  font-size: 80px;
+    color: var(--lightblue);
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner .text h1{
+  font-size: 40px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.5;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-lgsp{
@@ -439,3 +441,192 @@ span{
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
+
+.developers{
+  /* height: 91.7vh; */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #eeeeee;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+
+h1.dev-head{
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--darkblue);
+  padding: 20px;
+}
+
+.wrapper{
+  width: 100%;
+}
+.carousel{
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .card{
+  color: var(--skyblue);
+  background: #173d47;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0px 15px 15px rgba(0,0,0,0.2);
+  backdrop-filter: blur(15px);
+}
+
+.carousel .card .content{
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.carousel .card:hover .content{
+  opacity: 1;
+}
+
+.carousel .card .imgD{
+  padding: 35px;
+  border-radius: 50% !important;
+}
+
+.carousel .card .desg{
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.carousel .card .content a{
+  color: var(--skyblue);
+  font-size: 24px;
+}
+
+.carousel .card .content i{
+  padding: 0 10px;
+}
+
+.ftco-bg-dark{
+  background: #3c312e;
+}
+
+.ftco-footer{
+  font-size: 14px;
+  background: #141313;
+  padding: 50px 0 10px 0;
+}
+
+.ftco-footer .ftco-footer-logo{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.ftco-footer .ftco-footer-widget h2{
+  font-weight: normal;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ftco-footer .ftco-footer-widget ul li a span{
+  color: #fff;
+}
+
+.ftco-footer .ftco-footer-widget .thumb a.thumb-menu{
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+
+.ftco-footer p{
+  color: rgba(255,255,255,0.7);
+}
+
+.ftco-footer a{
+  color: rgba(255,255,255,0.7);
+}
+
+.ftco-footer a:hover{
+  color: #ffffff;
+}
+
+.ftco-footer .ftco-heading-2{
+  font-size: 17px;
+  font-weight: 700px;
+  color: #000000;
+}
+
+.ftco-footer .categories li{
+  border-bottom: 1px solid  rgba(255,255,255,0.1);
+}
+
+.ftco-footer .categories li a span{
+  color: rgba(255,255,255,0.5) !important;
+}
+
+.ftco-footer .subscribe-form .form-group{
+  position: relative;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.ftco-footer .subscribe-form .form-group input{
+  border-radius: 2px;
+  width: 100%;
+  background: rgba(255,255,255,0.1) !important;
+  border: none;
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 16px;
+}
+
+.ftco-footer .open-hours{
+  color: rgba(255,255,255,0.7);
+}
+
+.ftco-footer .subscribe-form .form-group .submit{
+  color: #ffffff !important;
+  font-size: 16px;
+  background: #c8a97e !important;
+  border: none !important;
+  border-radius: 2px;
+}
+
+.ftco-footer .subscribe-form .form-group .submit:hover{
+  cursor: pointer;
+}
+
+.ftco-footer .subscribe-form .icon{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.7);
+}
+
+.ftco-footer-social li{
+  font-size: 24px;
+  list-style: none;
+  margin: 0 18px 0 0;
+  display: inline-block;
+}
+
+.contact-icon{
+  font-size: 24px;
+  color:rgba(0, 0, 0, 0.7);
+  padding-right: 10px;
+}
+
+.text p{
+  color:rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  font-family: "Poppins";
+  padding-bottom: 10px;
+}
+
+.text a{
+  color:rgba(0, 0, 0, 0.7);
+}
+
