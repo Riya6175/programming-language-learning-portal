@@ -110,7 +110,7 @@ h4.subtitle{
 .ftco-content .code{
     padding: 5px;
     border-radius: 3px;
-    background-color: #ffffff;
+    background-color: rgb(40,44,52);
     margin-bottom: 0;
 }
 
@@ -119,24 +119,24 @@ h4.subtitle{
 }
 
 span.function{
-    color: blue;
-}
-
-span.brackets{
-    color: brown;
-}
-
-span.disptxt{
-    color: green;
-}
-
-span.comment{
-    color: gray;
-}
-
-span.filename{
-    color: maroon;
-}
+    color: #45b6fe;
+  }
+  
+  span.brackets{
+    color: #f4a460;
+  }
+  
+  span.disptxt{
+    color: #80c904;
+  }
+  
+  span.comment{
+    color: #eeeeee;
+  }
+  
+  span.filename{
+    color: #ed2939;
+  }
 
 .ftco-content .page-links{
     display: flex;
