@@ -443,7 +443,7 @@ span{
 }
 
 .developers{
-  /* height: 91.7vh; */
+  height: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -451,6 +451,7 @@ span{
   background-repeat: no-repeat;
   background-position:center;
   background-size: cover;
+  padding-bottom: 40px;
 }
 
 h1.dev-head{
@@ -629,4 +630,6 @@ h1.dev-head{
 .text a{
   color:rgba(0, 0, 0, 0.7);
 }
+
+
 
