@@ -61,7 +61,7 @@ a.navbar-brand.logo{
 }
 .dropdown {
   list-style: none;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .dropdown .nav-link {
