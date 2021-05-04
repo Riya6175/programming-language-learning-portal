@@ -34,7 +34,7 @@ passport.use(new GoogleStrategy({
 passport.use(new LinkedInStrategy({
   clientID: "86dceq0ay51t6j",
   clientSecret: "iM4oUqScur9In2zP",
-  callbackURL: "http://localhost:3000/linkedin/callback",
+  callbackURL: "https://infinite-springs-51898.herokuapp.com/linkedin/callback",
   // scope: ['r_emailaddress', 'r_liteprofile'],
 }, function (accessToken, refreshToken, profile, done) {
   const newUser = {
@@ -51,7 +51,7 @@ passport.use(new LinkedInStrategy({
 passport.use(new GithubStrategy({
   clientID: "be48a2bcda57ee2d6248",
   clientSecret: "6e9211669afe6df831c4418547ed75afc5e4b7b8",
-  callbackURL: "http://localhost:3000/github/callback",
+  callbackURL: "https://infinite-springs-51898.herokuapp.com/github/callback",
 }, function (accessToken, refreshToken, profile, done) {
   const newUser = {
     GithubId: profile.id,
