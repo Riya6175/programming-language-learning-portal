@@ -7,6 +7,8 @@ const session = require('express-session');
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const mongoose = require("mongoose");
+const Window = require('window');
+const window = new Window()
 const fs = require("fs");
 const axios = require("axios"); // install axios package "npm i axios"
 
@@ -302,23 +304,19 @@ app.get('/button_api', function(req, res) {
 res.send(data_output);
 });
 
-//----pdf file---------
-// 1. This example saves generated pdf document to the file system
-app.post('/pdf',function(req,res){
-  axios.post('https://api.html2pdf.app/v1/generate', {
-    html: 'https://infinite-springs-51898.herokuapp.com/'+window.location.href,
-    apiKey: 'fH6GXSRXL1hg9wpuuTGAXT63LwyLuZbtZdjsF50Fbm62QY8FZlPFo2Sw1v0VpKJM',
-  }, {responseType: 'arraybuffer'}).then((response) => {
-    fs.writeFileSync('./'+window.location.href+'.pdf', response.data);
-  }).catch((err) => {
-    console.log(err.message);
-  });
-});
- 
+// //----pdf file---------
+// // 1. This example saves generated pdf document to the file system
 
-
+//   axios.post('https://api.html2pdf.app/v1/generate', {
+//     html: 'https://infinite-springs-51898.herokuapp.com/introduction',
+//     apiKey: 'fH6GXSRXL1hg9wpuuTGAXT63LwyLuZbtZdjsF50Fbm62QY8FZlPFo2Sw1v0VpKJM',
+//   }, {responseType: 'arraybuffer'}).then((response) => {
+//     fs.writeFileSync('./hello.pdf', response.data);
+//   }).catch((err) => {
+//     console.log(err.message);
+//   });
   
-//--------------------listning to server(do not touch)------------------------------
+//--------------------listening to server(do not touch)------------------------------
 app.listen(port, function(){
   console.log(`server running on port ${port}`);
 });

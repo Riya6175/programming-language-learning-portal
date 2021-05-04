@@ -95,22 +95,16 @@
           }
         }
       });
-//setInterval(fetch_data, 3000);
-// async function pdf_con()
-// {
-//   var pdf_link = 'https://api.html2pdf.app/v1/generate?url=https://www.google.com&apiKey=fH6GXSRXL1hg9wpuuTGAXT63LwyLuZbtZdjsF50Fbm62QY8FZlPFo2Sw1v0VpKJM';
-//   console.log(pdf_link);
 
-//   await sleep(2000)
-//   //do stuff
-//   fetch (pdf_link);
-// };
-// function pdf_con(){
-//     fetch("https://api.html2pdf.app/v1/generate?url=https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch&apiKey=fH6GXSRXL1hg9wpuuTGAXT63LwyLuZbtZdjsF50Fbm62QY8FZlPFo2Sw1v0VpKJM");
-//   }
 
+function pdf_con()
+{
+  var pdf_link = 'https://api.html2pdf.app/v1/generate?url=https://infinite-springs-51898.herokuapp.com/'+window.location.href+'&apiKey=GtoLgHCvCghsoyoRMEd5ITn7yyk5U4N7DGooToBOaNwZUtu0WeIpclxDMvS5gegO';
+  console.log(pdf_link);
   
-
-</script>
+  fetch (pdf_link)
+    .then(window.open(pdf_link));
+}
+</script >
 </body>
 </html>
