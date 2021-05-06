@@ -1,1 +1,1 @@
-web: node Project_front_end/app.js
+web: node app.js
