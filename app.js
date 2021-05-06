@@ -277,16 +277,7 @@ app.post("/login", function(req,res){
       }
       else{
         req.login(user, function(err){
-          if(user.password != req.body.password){
-            errors2.push({msg: 'incorrect password'});
-            res.render("login-signup",{
-              errors2,
-              username,
-              password
-            });
-            return (null,false);
-          }
-          else if(err){
+           if(err){
             console.log(err);
           }
           else{
