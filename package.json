@@ -18,8 +18,13 @@
     "passport-github2": "^0.1.12",
     "passport-google-oauth2": "^0.2.0",
     "passport-linkedin-oauth2": "^2.0.0",
+<<<<<<< HEAD
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0",
     "window": "^4.2.7"
+=======
+    "passport-local-mongoose": "^6.1.0",
+    "popper.js": "^1.16.1"
+>>>>>>> fa3b7f916c65dc0b49f6aa72f62300b4d4e89736
   }
 }
