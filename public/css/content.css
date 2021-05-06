@@ -62,6 +62,7 @@ h2.page-title{
     font-weight: 500;
     display: flex;
     justify-content: center;
+    text-align: center;
     color: #444444;
     width: 100%;
 }
@@ -238,7 +239,7 @@ hr{
     font-weight: 600;
 }
 
-@media(min-width:780px) and (max-width:800px){
+@media(min-width:768px) and (max-width:800px){
     .sidenav{
         display: none;
     }
@@ -249,7 +250,36 @@ hr{
     }
 }
 
-@media(min-width:350px) and (max-width:500px){
+@media(min-width:501px) and (max-width:767px){
+    .navigation{
+        display: none;
+    }
+    .ftco-content{
+        width: 80%;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .ftco-content .links{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .ftco-content .links .btn-links{
+        outline: none !important;
+        font-weight: normal;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 1% 1%;
+        margin: 1% 1%;
+        color: var(--darkblue);
+        background-color: transparent;
+        border: 1px solid var(--darkblue);
+        border-radius: 5px;
+    }
+}
+
+@media(min-width:360px) and (max-width:500px){
     .sidenav{
         display: none;
     }

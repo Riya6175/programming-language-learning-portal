@@ -156,52 +156,6 @@ outline: none !important;
 border:none !important;
 }
 
-/*.sidenav {
-position: absolute;
-margin-top: 100px;
-height: 22.5%;
-width: 300px;
-z-index: 1;
-top: 0px;
-left: 35px;
-background-color: var(--skyblue);
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left:0;
-font-family: 'Poppins', sans-serif;
-}
-
-button.dropdown-btn{
-display: inline;
-margin-right: 0 !important;
-background-color: var(--skyblue);
-font-weight: 600;
-font-family: 'Poppins', sans-serif;
-font-size: 20px;
-border: none !important;
-outline: none !important;
-}
-
-/* Style the sidenav links and the dropdown button 
-.sidenav a, .dropdown-btn {
-width: 300px;
-padding: 5px 10px 5px 10px;
-text-decoration: none;
-color: var(--darkblue);
-display: block;
-border: none;
-background-color: var(--skyblue);
-text-align: left;
-cursor: pointer;
-outline: none;
-overflow-y:hidden;
-width:100%;
-}
-
-/* On mouse-over 
-.sidenav a:hover, .dropdown-btn:hover {
- background-color: rgba(246, 245, 245, 0.7);
-}*/
 /* Main content */
 .main {
 margin-left: 200px; /* Same as the width of the sidenav */
@@ -368,6 +322,7 @@ span{
   color: var(--bluishgrey);
 }
 
+/*about page css*/
 .grid-container.about-grid{
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -375,11 +330,11 @@ span{
   height: 91vh;
 }
 
-.grid-container.about-grid .grid-item img{
+.grid-container.about-grid .grid-item1 img{
   padding: 130px 50px 0px 50px;
 }
 
-.grid-container.about-grid .grid-item h1{
+.grid-container.about-grid .grid-item2 h1{
   padding-top: 180px;
   padding-bottom: 20px;
   font-size: 60px;
@@ -387,7 +342,7 @@ span{
   color: var(--darkblue);
 }
 
-.grid-container.about-grid .grid-item p{
+.grid-container.about-grid .grid-item2 p{
   font-size: 20px;
   padding-right: 50px;
 }
@@ -630,3 +585,22 @@ h1.dev-head{
   color:rgba(0, 0, 0, 0.7);
 }
 
+@media (min-width:360px) and (max-width:500px){
+  .grid-container.about-grid .grid-item1{
+    display: none;
+    padding: 0;
+    width: 0;
+  }
+  .grid-item{
+    padding-top: 5px;
+  }
+  .grid-container.about-grid .grid-item2 h1{
+    padding: 5px;
+  }
+  .grid-container.about-grid .grid-item2 p{
+    padding: 5px;
+  }
+  .grid-container.about-grid .grid-item2{
+    padding: 5px;
+  }
+}
