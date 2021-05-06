@@ -269,9 +269,8 @@ app.post("/login", function(req,res){
   } else{
     User.findOne({
       username:username,
-      password:password
     }).then(user => {
-      if(!user || !user.validPassword(password)){
+      if(!user){
         errors2.push({msg: 'incorrect password or username'});
         res.render("login-signup",{
           errors2,
@@ -280,19 +279,30 @@ app.post("/login", function(req,res){
         });
       }
       else{
-        req.login(user, function(err){
-          if(err){
-            console.log(err);
-          }
-          else{
+        // req.login(user, function(err){
+        //   if(err){
+        //     console.log(err);
+        //   }
+        //   else{
             passport.authenticate("local")(req, res, function(){
-              res.redirect("/editor");
+              if(err){
+                errors2.push({msg: 'incorrect password'});
+                res.render("login-signup",{
+                  errors2,
+                  username,
+                  password
+                });
+              }
+              else{
+                res.redirect("/editor");
+              }
+              
                 // res.render("editor",{
                 //   username: req.user.username
                 // });
             });
-          }
-        });
+          //}
+        //});
       }
     })
   }
