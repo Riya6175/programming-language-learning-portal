@@ -10,7 +10,10 @@ const mongoose = require("mongoose");
 const Window = require('window');
 const window = new Window()
 const fs = require("fs");
-const axios = require("axios"); // install axios package "npm i axios"
+const bcrypt = require('bcryptjs');
+var flash = require('connect-flash');
+const LocalStrategy = require('passport-local').Strategy;
+
 
 app.use(express.json());
 app.set('view engine', 'ejs');
@@ -28,8 +31,8 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(session({
   secret: "this is little secret",
-  resave: false,
-  saveUninitialized: false
+  resave:true,
+  saveUninitialized: true
 }));
 
 app.use(passport.initialize());
@@ -38,6 +41,7 @@ app.use(passport.session());
 const cookieSession = require('cookie-session');
 // const GoogleStrategy = require('passport-google-oauth2').Strategy;
 const { createBrotliCompress } = require('zlib');
+const { equal } = require('assert');
 require('./passport-setup');
 
 
@@ -98,7 +102,7 @@ userSchema.plugin(passportLocalMongoose);
 //------------------model---------------------------------------
 const User = new mongoose.model("User",userSchema);
 
-//module.exports = User;
+module.exports = User;
 
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
@@ -219,9 +223,14 @@ app.get('/home', function(req, res) {
   });
   
   app.get('/login-signup',function(req,res){
+    
     res.render('login-signup');
   });
 
+  app.get('/signup',function(req,res){
+    
+    res.render('login-signup');
+  }); 
 
   app.get("/editor",function(req,res){
     if(req.isAuthenticated()){
@@ -236,38 +245,108 @@ app.get('/home', function(req, res) {
     res.redirect("/");
   });
 //-----------------post - request for login-signup-------------------------------------------
-  app.post("/login", function(req,res){
-    const user = new User({
-      username: req.body.username,
-      Password: req.body.password
+app.use(flash());
+
+app.use(function(req,res,next){
+  res.locals.error = req.flash('error');
+  next();
+})
+
+app.post("/login", function(req,res){
+  const { username, password  } = req.body;
+  let errors2 = [];
+  const user = new User({
+    username: req.body.username,
+    Password: req.body.password
+  });
+  if (errors2.length > 0) {
+    res.render('login-signup', {
+      errors2,
+      username,
+      password,
+     
     });
-    
-    req.login(user, function(err){
-      if(err){
-        console.log(err);
+  } else{
+    User.findOne({
+      username:username,
+      password:password
+    }).then(user => {
+      if(!user || !user.validPassword(password)){
+        errors2.push({msg: 'incorrect password or username'});
+        res.render("login-signup",{
+          errors2,
+          username,
+          password
+        });
       }
       else{
-        passport.authenticate("local")(req, res, function(){
-          res.redirect("/editor");
+        req.login(user, function(err){
+          if(err){
+            console.log(err);
+          }
+          else{
+            passport.authenticate("local")(req, res, function(){
+              res.redirect("/editor");
+                // res.render("editor",{
+                //   username: req.user.username
+                // });
+            });
+          }
+        });
+      }
+    })
+  }
+});
+
+app.post('/signup', (req, res) => {
+  const { username, Email, password  } = req.body;
+  let errors = [];
+  if (errors.length > 0) {
+    res.render('login-signup', {
+      errors,
+      userrname,
+      Email,
+      password,
+     
+    });
+  } else {
+    User.findOne({ username: username }).then(user => {
+      if (user) {
+        errors.push({ msg: 'username already exists' });
+        res.render('login-signup', {
+          errors,
+          username,
+          Email,
+          password,
+          
+        });
+      } else {
+        // const newUser = new User({
+        //   username,
+        //   Email,
+        //   password
+        // });
+
+        User.register({username: req.body.username,Email:req.body.Email},req.body.password, function(err,user){
+          if(err){
+            console.log(err);
+            res.redirect("/login-signup");
+          }else{
+            passport.authenticate("local")(req, res, function(){
+              //if(!password)
+              res.redirect("/editor");
+              // res.render("editor",{
+              //   username: req.user.username
+              // })
+            });
+          }
         });
       }
     });
-  });
+  }
+});
 
-  
-  app.post("/signup", function(req,res){
-    User.register({username: req.body.username,Email:req.body.Email},req.body.password, function(err,user){
-      if(err){
-        console.log(err);
-        res.redirect("/login-signup");
-      }else{
-        passport.authenticate("local")(req, res, function(){
-          res.redirect("/editor");
-        });
-      }
-    });
-  });
-
+module.exports = app;
   
 //--------------Editor related code---------------
 //--------------do not touch this part------------
@@ -304,18 +383,6 @@ app.get('/button_api', function(req, res) {
 res.send(data_output);
 });
 
-// //----pdf file---------
-// // 1. This example saves generated pdf document to the file system
-
-//   axios.post('https://api.html2pdf.app/v1/generate', {
-//     html: 'https://infinite-springs-51898.herokuapp.com/introduction',
-//     apiKey: 'fH6GXSRXL1hg9wpuuTGAXT63LwyLuZbtZdjsF50Fbm62QY8FZlPFo2Sw1v0VpKJM',
-//   }, {responseType: 'arraybuffer'}).then((response) => {
-//     fs.writeFileSync('./hello.pdf', response.data);
-//   }).catch((err) => {
-//     console.log(err.message);
-//   });
-  
 //--------------------listening to server(do not touch)------------------------------
 app.listen(port, function(){
   console.log(`server running on port ${port}`);
