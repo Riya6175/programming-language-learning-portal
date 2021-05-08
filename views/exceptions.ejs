@@ -4,13 +4,12 @@
 <section class="ftco-content">
     <h2 class="page-title">Exceptions Handling</h2>
     <nav class="links">
-        <button class="btn-links" onclick="pdf_con()">PDF Version</button>
-        <button class="btn-links">PDF</button>
+        <button class="btn-links">PDF Version</button>
         <button class="btn-links" onclick="location.href='/date-time'">Date & Time </button>
         <button class="btn-links" onclick="location.href='/functions'">Functions</button>
         <button class="btn-links" onclick="location.href='/modules'">Modules </button>
-        <button class="btn-links" onclick="location.href='/fileio'">FileIO </button>
-        <button class="btn-links" onclick="location.href='/class-objects'">Class-Objects </button>
+        <button class="btn-links" onclick="location.href='/fileio'">File IO </button>
+        <button class="btn-links" onclick="location.href='/class-objects'">class-objects </button>
     </nav>
     <p class="content">
         Python provides two very important features to handle any unexpected error in your Python programs and to add debugging capabilities in them −
@@ -151,11 +150,11 @@
             <p class="code">
                 <span class="function">#!/usr/bin/python</span><br>
                 <br>
-                <span class="function"> def </span><span class="disptxt">KelvinToFahrenheit</span></span><span class="brackets">(</span><span class="disptxt">Temperature</span></span><span class="brackets">)</span><br>
-                <span class="function"> return </span></span><span class="brackets">((</span><span class="disptxt">Temperature-273</span></span><span class="brackets">),</span></span><span class="disptxt">*1.8)+32</span><br>
-                <span class="function"> print </span><span class="disptxt">KelvinToFahrenheit</span><span class="brackets">(</span><span class="disptxt">273</span><span class="brackets">)</span>
-                <span class="function"> print int</span><span class="disptxt">KelvinToFahrenheit</span><span class="brackets">(</span><span class="disptxt">505.78</span><span class="brackets">))</span>
-                <span class="function"> print</span><span class="disptxt">KelvinToFahrenheit</span><span class="brackets">(</span><span class="disptxt">-5</span><span class="brackets">)</span>
+                <span class="function"> def </span><span class="function">KelvinToFahrenheit</span><span class="brackets">(</span><span class="function"> Temperature </span></span><span class="brackets">)</span><br>
+                <span class="function"> return </span></span><span class="brackets">((</span><span class="function">Temperature</span><span class="comment">-</span><span class="filename">273</span><span class="brackets">),</span><span class="comment">*</span><span class="filename">1.8</span><span class="comment">)</span><span class="comment">+</span><span class="filename">32</span><br>
+                <span class="function"> print </span><span class="function">KelvinToFahrenheit</span><span class="brackets">(</span><span class="filename">273</span><span class="brackets">)</span>
+                <span class="function"> print int</span><span class="function">KelvinToFahrenheit</span><span class="brackets">(</span><span class="filename">505.78</span><span class="brackets">))</span>
+                <span class="function"> print</span><span class="function">KelvinToFahrenheit</span><span class="brackets">(</span><span class="filename">-5</span><span class="brackets">)</span>
             </p>
         </aside>
         <p class="content">
@@ -220,10 +219,10 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
-                <span class="function"> try: </span><br>
-                <span class="function"> fh= open </span><span class="brackets">(</span><span class="disptxt">"testfile", "w"</span></span><span class="brackets">)</span><br>
+                <span class="function"> try<span class="comment">:</span> <br>
+                <span class="function"> fh</span><span class="comment">=</span> <span class="function">open</span><span class="brackets">(</span><span class="disptxt">"testfile", "w"</span></span><span class="brackets">)</span><br>
                 <span class="function"> fh.write<span class="brackets">(</span> </span><span class="disptxt">"This is my test file for exception handling!!"</span><span class="brackets">)</span>
                 <span class="function"> except IOError: </span><br>
                 <span class="function"> print </span><span class="disptxt">"Error: can\'t find file or read data"</span><br>
@@ -296,11 +295,11 @@
         <h3 class="subtitle">Example</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
                 <span class="function"> try: </span><br>
-                <span class="function"> fh= open </span><span class="brackets">(</span><span class="disptxt">"testfile", "w"</span></span><span class="brackets">)</span><br>
-                <span class="function"> fh.write<span class="brackets">(</span> </span><span class="disptxt">"This is my test file for exception handling!!"</span><span class="brackets">)</span>
+                <span class="function"> fh</span><span class="comment"> = </span><span class="function">open</span> <span class="brackets">(</span><span class="disptxt">"testfile", "w"</span><span class="brackets">)</span><br>
+                <span class="function"> fh.write<span class="brackets">(</span> </span><span class="disptxt">"This is my test file for exception handling!!"</span><span class="brackets">)</span><br>
                 <span class="function"> Finally: </span><br>
                 <span class="function"> print </span><span class="disptxt">"Error: can\'t find file or read data"</span><br>
             </p>
@@ -316,7 +315,7 @@
 
         <nav class="page-links">
             <button class="btn-pglinks" onclick="location.href='/fileio'"><i class="fa fa-angle-left"></i>Previous Page</button>
-            <button class="btn-pglinks" onclick="pdf_con()">PDF Preview</button>
+            <button class="btn-pglinks">PDF Preview</button>
             <button class="btn-pglinks" onclick="location.href='/class-objects'">Next Page<i class="fa fa-angle-right"></i></button>
         </nav>
 </section>
