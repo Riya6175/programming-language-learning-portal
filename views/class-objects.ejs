@@ -4,14 +4,12 @@
 <section class="ftco-content">
     <h2 class="page-title">Object Oriented</h2>
     <nav class="links">
-        <button class="btn-links" onclick="pdf_con()">PDF Version</button>
+        <button class="btn-links">PDF Version</button>
         <button class="btn-links" onclick="location.href='/date-time'">Date & Time </button>
-        <button class="btn-links">PDF</button>
-        <button class="btn-links" onclick="location.href='/date-time'">Date-Time </button>
         <button class="btn-links" onclick="location.href='/functions'">Functions</button>
         <button class="btn-links" onclick="location.href='/modules'">Modules </button>
         <button class="btn-links" onclick="location.href='/fileio'">FileIO </button>
-        <button class="btn-links" onclick="location.href='/exceptions'">Exceptions </button>
+        <button class="btn-links" onclick="location.href='/exceptions'">exceptions </button>
 
     </nav>
     <p class="content">
@@ -57,16 +55,16 @@
     <aside class="code-frame">
         <p class="code">
             <span class="function">class Employee:</span><br>
-            <span class="function"> class </span><span class="disptxt">Employee: </span><span class="disptxt">'Common base class for all employees'</span><br>
-            <span class="function">empCount = 0</span><br>
+            <span class="disptxt">'Common base class for all employees'</span><br>
+            <span class="function">empCount</span><span class="comment">=</span> <span class="filename">0</span><br>
             <br>
-            <span class="function">def __init__ </span><span class="brackets">(</span><span class="disptxt">self, name, salary</span><span class="brackets">):</span><br>
-            <span class="function"> self.name = name </span><br>
-            <span class="function"> self.salary = salary </span><br>
-            <span class="function"> Employee.empCount += 1 </span><br>
-            <span class="function">def displayCount </span><span class="brackets">(</span><span class="disptxt">self</span><span class="brackets">):</span><br>
+            <span class="function">def __init__ </span><span class="brackets">(</span><span class="function">self, name, salary</span><span class="brackets">)</span><span class="comment">:</span><br>
+            <span class="function"> self.name</span><span class="comment">=</span><span clas="funcrion">name</span> <br>
+            <span class="function"> self.salary</span><span class="comment"> = </span><span clas="funcrion">salary</span> <br>
+            <span class="function"> Employee.empCount </span><span class="comment">+=</span><span class="filename"> 1 </span><br>
+            <span class="function">def displayCount </span><span class="brackets">(</span><span class="disptxt">self</span><span class="brackets">)</span><span class="comment">:</span><br>
             <span class="function"> print </span><span class="disptxt">"Total Employee %d"</span><span class="function"> % Employee.empCount </span><br>
-            <span class="function">def displayEmployee </span><span class="brackets">(</span><span class="disptxt">self</span><span class="brackets">):</span><br>
+            <span class="function">def displayEmployee </span><span class="brackets">(</span><span class="disptxt">self</span><span class="brackets">)</span><span class="comment">:</span><br>
             <span class="function"> print</span><span class="disptxt">"Name : ",</span><span class="function"> self.name,</span><span class="disptxt">", Salary: ",</span><span class="function"> self.salary</span>
         </p>
     </aside>
@@ -82,10 +80,10 @@
     </p>
     <aside class="code-frame">
         <p class="code">
-            <span class="function">"This would create first object of Employee class"<br>
-                emp1 = Employee("Zara", 2000)<br>
-                "This would create second object of Employee class"<br>
-                emp2 = Employee("Manni", 5000)<br></span><br>
+            <span class="disptxt">"This would create first object of Employee class"<br>
+            <span class="function">emp1 </span><span class="comment">=</span><span class="function">Employee</span><span class="brackets">(</span><span class="disptxt">"Zara",</span> <span class="filename">2000</span><span class="brackets">)</span><br>
+            <span class="disptxt"> "This would create second object of Employee class"</span><br>
+            <span class="function"> emp2</span><span class = "comment">=</span><span class="function">Employee</span><span class="brackets">(</span> <span class="disptxt">"Manni",</span> <span class="filename">5000</span><span class="brackets">)</span><br>
         </p>
     </aside>
     <h3 class="subtitle">Accessing Attributes</h3>
@@ -95,9 +93,9 @@
 
     <aside class="code-frame">
         <p class="code">
-            <span class="function"> emp1.displayEmployee()<br>
-                emp2.displayEmployee()<br>
-                print "Total Employee %d" % Employee.empCount<br></span><br>
+            <span class="function"> emp1.displayEmployee</span><span class="brackets">()</span><br>
+            <span class="function">emp2.displayEmployee</span> <span class="brackets">()</span><br>
+            <span class="function">print</span><span class="disptxt">"Total Employee %d" % Employee.empCount</span> <br>
         </p>
     </aside>
     <p class="content">
@@ -105,27 +103,27 @@
     </p>
     <aside class="code-frame">
         <p class="code">
-            <span class="function">#!/usr/bin/python</span><br>
+            <span class="comment">#!/usr/bin/python</span><br>
             <span class="function"> class Employee: </span><br>
             <span class="disptxt">'Common base class for all employees'</span>
-            <span class="function"> empCount = 0 </span><br>
+            <span class="function"> empCount</span><span class ="filename">0</span><br>
             <br>
-            <span class="function">def __init__ </span><span class="brackets">(</span><span class="disptxt">self, name, salary</span><span class="brackets">):</span><br>
-            <span class="function"> self.name = name </span><br>
-            <span class="function"> self.salary = salary </span><br>
-            <span class="function"> Employee.empCount += 1 </span><br>
+            <span class="function">def __init__ </span><span class="brackets">(</span><span class="function">self, name, salary</span><span class="brackets">)</span><span class="comment">:</span><br>
+            <span class="function"> self.name</span><span class="comment">=</span> <span class="function">name</span> <br>
+            <span class="function"> self.salary</span><span class="comment">=</span> <span class="function">salary</span> <br>
+            <span class="function"> Employee.empCount<span class="comment">+=</span> <span class="filename">1</span><br>
             <br>
-            <span class="function">def displayCount </span><span class="brackets">(</span><span class="disptxt">self</span><span class="brackets">):</span><br>
+            <span class="function">def displayCount </span><span class="brackets">(</span><span class="disptxt">self</span><span class="brackets">)</span><span class="comment">:</span><br>
             <span class="function"> print </span><span class="disptxt">"Total Employee %d"</span><span class="function"> % Employee.empCount </span><br>
-            <span class="function">def displayEmployee </span><span class="brackets">(</span><span class="disptxt">self</span><span class="brackets">):</span><br>
+            <span class="function">def displayEmployee </span><span class="brackets">(</span><span class="function">self</span><span class="brackets">)</span><span class="comment">:</span><br>
             <span class="function"> print</span><span class="disptxt">"Name : ",</span><span class="function"> self.name,</span><span class="disptxt">", Salary: ",</span><span class="function"> self.salary</span>
             <br>
             <span class="disptxt">"This would create first object of Employee class"</span>
-            <span class="function">emp1= Employee </span><span class="brackets">(</span><span class="disptxt">"Zara", 2000</span><span class="brackets">):</span></span>
+            <span class="function">emp1</span><span class="comment">=</span><span class="function">Employee</span></span><span class="brackets">(</span><span class="disptxt">"Zara",</span><span class="filename">2000</span> <span class="brackets">)</span><span class="comment">:</span>
             <span class="disptxt">"This would create second object of Employee class"</span>
-            <span class="function">emp1= Employee </span><span class="brackets">(</span><span class="disptxt">"Manni", 5000</span><span class="brackets">):</span></span>
-            <span class="function">emp1.displayEmployee() </span>
-            <span class="function">emp2.displayEmployee() </span>
+            <span class="function">emp1</span><span class="function">Employee</span>  </span><span class="brackets">(</span><span class="disptxt">"Manni",</span><span class="filename">5000</span> <span class="brackets">)</span><span class="comment">:</span>
+            <span class="function">emp1.displayEmployee</span><span class="brackets">()</span>
+            <span class="function">emp2.displayEmployee</span><spanclass="brackets">()</span>
             <span class="function">print </span><span class="disptxt">"Total Employee %d"</span><span class="function">% Employee.empCount</span>
         </p>
     </aside>

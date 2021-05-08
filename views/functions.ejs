@@ -5,14 +5,12 @@
 
         <h2 class="page-title">Functions</h2>
         <nav class="links">
-            <button class="btn-links" onclick="pdf_con()">PDF Version</button>
+            <button class="btn-links">PDF Version</button>
             <button class="btn-links" onclick="location.href='/date-time'">Date & Time</button>
-            <button class="btn-links">PDF</button>
-            <button class="btn-links" onclick="location.href='/date-time'">Date-Time</button>
             <button class="btn-links" onclick="location.href='/modules'">Modules </button>
             <button class="btn-links" onclick="location.href='/fileio'">FileIO </button>
-            <button class="btn-links" onclick="location.href='/exceptions'">Exceptions </button>
-            <button class="btn-links" onclick="location.href='/class-objects'">Class-Objects </button>
+            <button class="btn-links" onclick="location.href='/exceptions'">exceptions </button>
+            <button class="btn-links" onclick="location.href='/class-objects'">class-objects </button>
         </nav>
         <p class="content">
             A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.<br>
@@ -34,10 +32,10 @@
         <h3 class="subtittle">Syntax</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">def functionname( parameters ):</span><br>
-                <span class="function">"function_docstring"</span><br>
+                <span class="function">def functionname</span><span class="brackets">(</span> <span class="function">parameters</span> <span class="brackets">)</span><span class="comment">:</span><br>
+                <span class="disptxt">"function_docstring"</span><br>
                 <span class="function">function_suite</span><br>
-                <span class="function">return [expression]</span><br>
+                <span class="function">return</span><span class="brackets">[</span> <span class="function">expression</span><span class="brackets">]</span><br>
             </p>
         </aside>
         <p class="content">
@@ -49,8 +47,8 @@
 
         <aside class="code-frame">
             <p class="code">
-                <span class="function">def printme</span> <span class="brackets">(</span><span class="disptxt"> str </span><span class="brackets">)</span>:
-                <span class="function">"This prints a passed string into this function"</span><br>
+                <span class="function">def printme</span> <span class="brackets">(</span><span class="function"> str </span><span class="brackets">)</span><span class="comment">:</span><br>
+                <span class="disptxt">"This prints a passed string into this function"</span><br>
                 <span class="function">print str</span><br>
                 <span class="function">return</span>
             </p>
@@ -92,16 +90,16 @@
                 <span class="function">#!/usr/bin/python</span><br>
                 <span class="function"># Function definition is here</span><br>
                 <br>
-                <span class="function">def</span> <span class="function">changeme</span> <span class="brackets">(</span><span class="disptxt">mylist</span><span class="brackets">)</span>:<br>
-                <span class="function">"This changes a passed list into this function"</span><br>
-                <span class="function">mylist.append</span><span class="brackets">(</span><span class="disptxt">[1,2,3,4]</span><span class="brackets">)</span>;<br>
-                <span class="function">print</span><span class="brackets"></span><span class="disptxt"></span><span class="brackets">"Values inside the function: ",</span><span class="function">mylist</span>;<br>
+                <span class="function">def</span> <span class="function">changeme</span> <span class="brackets">(</span><span class="disptxt">mylist</span><span class="brackets">)</span><span class="comment">:</span><br>
+                <span class="disptxt">"This changes a passed list into this function"</span><br>
+                <span class="function">mylist.append</span><span class="brackets">( </span><span class="brackets">[</span><span class="filename">1,2,3,4</span><span class="brackets">] )</span><span class="comment">;</span><br>
+                <span class="function">print</span><span class="disptxt">"Values inside the function: ",</span><span class="function">mylist</span>;<br>
                 <span class="function">return</span>
                 <br>
-                <span class="function"># Now you can call changeme function</span><br>
-                <span class="function">mylist = [10,20,30];</span><br>
-                <span class="function">changeme</span> <span class="brackets">(</span><span class="disptxt">mylist</span><span class="brackets">)</span>;<br>
-                <span class="function">print</span> <span class="brackets"></span><span class="disptxt">"Values outside the function: ",</span><span class="brackets"></span> mylist;
+                <span class="comment"># Now you can call changeme function</span><br>
+                <span class="function">mylist</span><span class="comment">=</span><span class="brackets">[</span><span class="filename"> 10,20,30 </span><span class="brackets">]</span><span class="comment">;</span><br>
+                <span class="function">changeme</span> <span class="brackets">(</span><span class="disptxt">mylist</span><span class="brackets">)</span><span class="comment">;</span><br>
+                <span class="function">print</span> <span class="brackets"></span><span class="disptxt">"Values outside the function: ",</span><span class="brackets"></span><span class="function">mylist</span> <span class="comment">;</span>
             </p>
         </aside>
         <p class="content">
@@ -133,15 +131,15 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
-                <span class="function"># Function definition is here</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
+                <span class="comment">#Function definition is here</span><br>
                 <br>
-                <span class="function">def printme</span> <span class="brackets">(</span><span class="disptxt"> str </span><span class="brackets">)</span>:<br>
+                <span class="function">def printme</span> <span class="brackets">(</span><span class="function"> str </span><span class="brackets">)</span><span class="comment">:</span><br>
                 <span class="function"></span> <span class="brackets"></span><span class="disptxt">"This prints a passed string into this function"</span><span class="brackets"></span>;<br>
                 <span class="function">print str</span><br>
                 <span class="function">return</span>;<br>
                 <br>
-                <span class="function"># Now you can call printme function</span><br>
+                <span class="comment"># Now you can call printme function</span><br>
                 <span class="function">printme </span> <span class="brackets">( )</span>;
             </p>
         </aside>
@@ -165,16 +163,16 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
-                <span class="function"># Function definition is here</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
+                <span class="comment">#Function definition is here</span><br>
                 <br>
-                <span class="function">def printme</span> <span class="brackets">(</span><span class="disptxt"> str </span><span class="brackets">)</span>:<br>
-                <span class="function"></span> <span class="brackets"></span><span class="disptxt">"This prints a passed string into this function"</span><span class="brackets"></span>;<br>
+                <span class="function">def printme</span> <span class="brackets">(</span><span class="function"> str </span><span class="brackets">)</span><span class="comment">:</span><br>
+                <span class="disptxt">"This prints a passed string into this function"</span></span>;<br>
                 <span class="function">print str</span><br>
                 <span class="function">return</span>;<br>
                 <br>
-                <span class="function"># Now you can call printme function</span><br>
-                <span class="function">printme </span> <span class="brackets">(</span><span class="function">str=  </span><span class="disptxt">"My string"</span><span class="brackets">)</span>;
+                <span class="comment"># Now you can call printme function</span><br>
+                <span class="function">printme </span> <span class="brackets">(</span><span class="function">str</span><span class="comment"> =</span> <span class="disptxt">"My string"</span><span class="brackets">)</span>;
             </p>
         </aside>
         <p class="content">
@@ -192,18 +190,18 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
-                <span class="function"># Function definition is here</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
+                <span class="comment">#Function definition is here</span><br>
                 <br>
-                <span class="function">def printinfo</span> <span class="brackets">(</span><span class="disptxt">name, age = 35 </span><span class="brackets">)</span>:
-                <span class="function"></span><span class="disptxt">"This prints a passed string into this function"</span>;<br>
-                <span class="function">print </span></span><span class="disptxt">"Name: ",</span>name<br>
-                <span class="function">print </span></span><span class="disptxt">"Age: ",</span>age<br>
-                <span class="function">return</span>;<br>
+                <span class="function">def printinfo</span> <span class="brackets">(</span><span class="function">name, age</span><span class="comment">=</span><span class="filename">35 </span> <span class="brackets">)</span><span class="comment">:</span>
+                <span class="disptxt">"This prints a passed string into this function"</span><span class="comment">;</span><br>
+                <span class="function">print </span><span class="disptxt">"Name: ",</span><span class="function">name</span><br>
+                <span class="function">print </span><span class="disptxt">"Age: ",</span><span class="function">age</span><br>
+                <span class="function">return</span><span class="comment">;</span><br>
                 <br>
-                <span class="function"># Now you can call printinfo function</span><br>
-                <span class="function">printinfo</span> <span class="brackets">(</span><span class="disptxt">age=50 , name="miki" </span><span class="brackets">)</span>;<br>
-                <span class="function">print</span> <span class="brackets">(</span><span class="disptxt"> name="miki" </span><span class="brackets">)</span>;
+                <span class="comment">#Now you can call printinfo function</span><br>
+                <span class="function">printinfo</span> <span class="brackets">(</span><span class="function">age<span class="comment">=</span><span class="filename">50</span><span class="comment">,</span> <span class="function">name</span><span class="comment">=</span><span class="filename">"miki"</span> <span class="brackets">)</span><span class="comment">;</span><br>
+                <span class="function">print</span> <span class="brackets">(</span><span class="function"> name</span><span class="comment">=</span><span class="filename">"miki"</span> </span><span class="brackets">)</span><span class="comment">;</span>
             </p>
         </aside>
         <p class="content">
@@ -237,19 +235,19 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
-                <span class="function"># Function definition is here</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
+                <span class="comment">#Function definition is here</span><br>
                 <br>
-                <span class="function">def printinfo</span> <span class="brackets">(</span><span class="disptxt">  arg1, *vartuple </span><span class="brackets">)</span>;<br>
-                <span class="function"></span><span class="disptxt">"This prints a variable passed arguments"</span>;<br>
+                <span class="function">def printinfo</span> <span class="brackets">(</span><span class="function">  arg1, *vartuple </span><span class="brackets">)</span><span class="comment">;</span><br>
+                <span class="disptxt">"This prints a variable passed arguments"</span><span class="comment">;</span><br>
                 <span class="function">print</span><span class="disptxt">"Output is: "</span>;<br>
-                <span class="function">for var in</span> vartuple:<br>
+                <span class="function">for var in vartuple </span><span class="comment">:</span> <br>
                 <span class="function">print var</span><br>
                 <span class="function">return</span>;<br>
                 <br>
-                <span class="function"># Now you can call printinfo function</span><br>
-                <span class="function">printinfo</span> <span class="brackets">(</span><span class="disptxt">10</span><span class="brackets">)</span>;
-                <span class="function">printinfo</span> <span class="brackets">(</span><span class="disptxt">( 70,60,50 )</span><span class="brackets">)</span>;
+                <span class="comment">#Now you can call printinfo function</span><br>
+                <span class="function">printinfo</span> <span class="brackets">(</span><span class="filename">10</span><span class="brackets">)</span>;
+                <span class="function">printinfo</span> <span class="brackets">( (</span><span class="filename">70,60,50</span><span class="brackets">) )</span>;
             </p>
         </aside>
         <p class="content">
@@ -281,7 +279,7 @@
         <p class="content">The syntax of lambda functions contains only a single statement, which is as follows −</p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">lambda [arg1 [,arg2,.....argn]]:expression</span><br>
+                <span class="function">lambda <span class="brackets">[</span> <span class="function">arg1</span> <span class="brackets">[,</span><span class="function">arg2</span><span class="comment">,.....</span><span class ="function">argn</span> <span class="brackets">]]</span><span class="comment">:</span><span class="function">expression</span></span><br>
             </p>
         </aside>
         <p class="content">
@@ -289,14 +287,14 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
-                <span class="function"># Function definition is here</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
+                <span class="comment"># Function definition is here</span><br>
                 <br>
-                sum= <span class="function">lamda</span> arg1, arg2: arg1 + arg2;<br>
+                <span class="function">sum</span> <span class="comment">=</span> <span class="function">lamda arg1</span> <span class="comment">,</span><span class="function">arg2</span> <span class="comment">:</span><span class="function">arg1</span> <span class="comment">+</span><span class="function">arg2</span><span class="comment" >;</span><br>
                 <br>
-                <span class="function"># Now you can call sum as a function</span><br>
-                <span class="function">print</span> <span class="disptxt"> "Value of total : ",</span> sum <span class="brackets">(</span><span class="disptxt">10,20</span><span class="brackets">)</span>;<br>
-                <span class="function">print</span> <span class="disptxt"> "Value of total : ",</span> sum <span class="brackets">(</span><span class="disptxt">20,20</span><span class="brackets">)</span>;
+                <span class="comment">#Now you can call sum as a function</span><br>
+                <span class="function">print</span> <span class="disptxt"> "Value of total : ",</span><span class="function">sum</span>  <span class="brackets">(</span><span class="filename">10,20</span><span class="brackets">)</span><span class="comment">;</span><br>
+                <span class="function">print</span> <span class="disptxt"> "Value of total : ",</span> <span class="function">sum</span>  <span class="brackets">(</span><span class="filename">20,20</span><span class="brackets">)</span><span class="comment">;</span>
             </p>
         </aside>
         <p class="content">
@@ -316,14 +314,14 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
-                <span class="function"># Function definition is here</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
+                <span class="comment"># Function definition is here</span><br>
                 <br>
-                <span class="function">def</span> sum( arg1, arg2):<br>
-                <span class="function"># Add both the perameter and return them.</span><br>
-                <span class="function">total= </span> arg1 + arg2<br>
-                <span class="function">print</span> <span class="disptxt">"Inside the function : ",</span> total;<br>
-                <span class="function">return </span> total <br>
+                <span class="function">def sum</span> <span class="brackets">(</span> <span class="function">arg1</span> <span class="comment">,</span><span class="function">arg2</span> <span class="brackets">)</span><span class="comment">:</span><br>
+                <span class="comment">#Add both the perameter and return them.</span><br>
+                <span class="function">total </span><span class="comment">=</span> <span class="function">arg1</span> <span class="comment">+</span> <span class="function">arg2</span><br>
+                <span class="function">print</span> <span class="disptxt">"Inside the function : ",</span><span class="function">total</span> <span class="comment">;</span><br>
+                <span class="function">return </span> <span class="function">total</span> <br>
             </p>
         </aside>
         <p class="content">
@@ -339,7 +337,7 @@
         <hr>
         <nav class="page-links">
             <button class="btn-pglinks" onclick="location.href='/date-time'"><i class="fa fa-angle-left"></i>Previous Page</button>
-            <button class="btn-pglinks" onclick="pdf_con()">PDF Preview</button>
+            <button class="btn-pglinks">PDF Preview</button>
             <button class="btn-pglinks" onclick="location.href='/modules'">Next Page<i class="fa fa-angle-right"></i></button>
         </nav>
 
