@@ -143,10 +143,6 @@ app.get('/home', function(req, res) {
   app.get('/overview', function(req,res){
     res.render('overview');
   });
-
-  app.get('/introduction', function(req,res){
-    res.render('introduction');
-  });
   app.get('/basic-syntax', function(req,res){
     res.render('basic-syntax');
   });
