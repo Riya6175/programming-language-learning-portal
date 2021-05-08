@@ -304,9 +304,9 @@ app.post('/signup', (req, res) => {
      
     });
   } else {
-    User.findOne({ username: username }).then(user => {
+    User.findOne({ username: username,Email:Email }).then(user => {
       if (user) {
-        errors.push({ msg: 'username already exists' });
+        errors.push({ msg: 'username or email already exists' });
         res.render('login-signup', {
           errors,
           username,
