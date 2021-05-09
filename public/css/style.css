@@ -604,6 +604,14 @@ h1.dev-head{
   .developers{
     margin-top: 440px;
   }
+
+  .homepage {
+    width: 200%;
+  }
+
+  .grid-container{
+    display: block;
+  }
 }
 
 @media (min-width:500px) and (max-width:786px){
