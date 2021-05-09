@@ -4,14 +4,12 @@
 <section class="ftco-content">
     <h2 class="page-title">Files I/O</h2>
     <nav class="links">
-        <button class="btn-links" onclick="pdf_con()">PDF Version</button>
+        <button class="btn-links">PDF Version</button>
         <button class="btn-links" onclick="location.href='/date-time'">Date & Time </button>
-        <button class="btn-links">PDF</button>
-        <button class="btn-links" onclick="location.href='/date-time'">Date-Time </button>
         <button class="btn-links" onclick="location.href='/functions'">Functions</button>
         <button class="btn-links" onclick="location.href='/modules'">Modules </button>
-        <button class="btn-links" onclick="location.href='/exceptions'">Exceptions </button>
-        <button class="btn-links" onclick="location.href='/class-objects'">Class-Objects </button>
+        <button class="btn-links" onclick="location.href='/exceptions'">exceptions </button>
+        <button class="btn-links" onclick="location.href='/class-objects'">class-objects </button>
     </nav>
         <p class="content">
             This chapter covers all the basic I/O functions available in Python. For more functions, please refer to
@@ -25,7 +23,7 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
                 <span class="function"> print </span><span class="disptxt">"Python is really a great language,", "isn't it?"</span><br>
             </p>
@@ -56,10 +54,10 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
-                <span class="function"> str = raw_input </span><span class="brackets">(</span><span class="disptxt">"Enter your input: "</span></span><span class="brackets">)</span><br>
-                <span class="function"> print </span><span class="disptxt">"Received input is : ",</span> str <br>
+                <span class="function"> str<span class="comment">=</span> <span class="function">raw_input </span><span class="brackets">(</span><span class="disptxt">"Enter your input: "</span></span><span class="brackets">)</span><br>
+                <span class="function"> print </span><span class="disptxt">"Received input is : ",</span><span class="function">str</span>  <br>
             </p>
         </aside>
         <p class="content">
@@ -80,9 +78,9 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
-                <span class="function"> str = input </span><span class="brackets">(</span><span class="disptxt">"Enter your input: "</span></span><span class="brackets">)</span><br>
+                <span class="function"> str </span><span class="comment">=</span> <span class="function">input</span> <span class="brackets">(</span><span class="disptxt">"Enter your input: "</span><span class="brackets">)</span><br>
                 <span class="function"> print </span><span class="disptxt">"Received input is : ",</span> str <br>
             </p>
         </aside>
@@ -288,12 +286,12 @@
         <h3 class="subtitle">Example</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
-                fo = open<span class="brackets">(</span><span class="disptxt">"foo.txt", "wb"</span><span class="brackets">)</span><br>
-                <span class="function"> print </span><span class="disptxt">"Name of the file: ",</span>fo.name<br>
-                <span class="function"> print </span><span class="disptxt">"Closed or not : ",</span>fo.closed<br>
-                <span class="function"> print </span><span class="disptxt">"Softspace flag : ",</span>fo.softspace<br>
+                <span class="function">fo</span><span class="comment"> = </span><span class="function">open</span><span class="brackets">(</span><span class="disptxt">"foo.txt", "wb"</span><span class="brackets">)</span><br>
+                <span class="function"> print </span><span class="disptxt">"Name of the file: ",</span><span class="function">fo.name</span><br>
+                <span class="function"> print </span><span class="disptxt">"Closed or not : ",</span><span class="function">fo.closed</span><br>
+                <span class="function"> print </span><span class="disptxt">"Softspace flag : ",</span><span class="function">fo.softspace</span><br>
             </p>
         </aside>
         <p class="content">
@@ -320,20 +318,20 @@
         <h3 class="subtitle">Syntax</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">fileObject.close()</span><br>
+                <span class="function">fileObject.close </span><span class="brackets">()</span><br>
             </p>
         </aside>
         <h3 class="subtitle">Example</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
-                <span class="function"># Open a file</span><br>
-                fo = open<span class="brackets">(</span><span class="disptxt">"foo.txt", "wb"</span><span class="brackets">)</span><br>
-                <span class="function"> print </span><span class="disptxt">"Name of the file: ",</span>fo.name<br>
+                <span class="comment"># Open a file</span><br>
+                <span class="function">fo </span><span class="comment">=</span><span class="function">open</span> <span class="brackets">(</span><span class="disptxt">"foo.txt", "wb"</span><span class="brackets">)</span><br>
+                <span class="function"> print </span><span class="disptxt">"Name of the file: ",</span><span class="function">fo.name</span><br>
                 <br>
-                <span class="function"># Close opend file</span><br>
-            </span><span class="disptxt">fo.close()</span>
+                <span class="comment">#Close opend file</span><br>
+            </span><span class="function">fo.close</span><span class="brackets">()</span>
             </p>
         </aside>
         <p class="content">
@@ -360,7 +358,7 @@
         <h3 class="subtitle">Syntax</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">fileObject.write(string)</span><br>
+                <span class="function">fileObject.write</span><span class="brackets">(</span><span class="function">string</span><span class="brackets">)</span><br>
             </p>
         </aside>
         <p class="content">
@@ -369,13 +367,13 @@
         <h3 class="subtitle">Example</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
                 <span class="function">open a file</span><br>
-                fo = open<span class="brackets">(</span><span class="disptxt">"foo.txt", "wb"</span><span class="brackets">)</span><br>
+                <span class="function">fo </span><span class="comment">=</span><span class="function">open</span> <span class="brackets">(</span><span class="disptxt">"foo.txt", "wb"</span><span class="brackets">)</span><br>
                 <span class="function"> fo.write </span><span class="brackets">(</span><span class="disptxt">"Python is really a great language,\nYeah its great!!\n"</span><span class="brackets">)</span><br>
-                <span class="function"># Close opend file</span><br>
-                <span class="disptxt">fo.close()</span>
+                <span class="comment"># Close opend file</span><br>
+                <span class="function">fo.close</span><span class="brackets">()</span>
             </p>
         </aside>
         <p class="content">
@@ -395,7 +393,7 @@
         <h3 class="subtitle">Syntax</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">fileObject.read([count])</span><br>
+                <span class="function">fileObject.read</span><span class="brackets">([</span><span class="function">count</span><span class="brackets">])</span><br>
             </p>
         </aside>
         <p class="content">
@@ -407,15 +405,15 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
                 <span class="function">open a file</span><br>
-                fo = open<span class="brackets">(</span><span class="disptxt">"foo.txt", "r+"</span><span class="brackets">)</span><br>
-                str = fo.read<span class="brackets">(</span><span class="disptxt">10</span><span class="brackets">)</span><br>
-                <span class="function"> print </span><span class="disptxt">"Read String is : ",</span> str <br>
+                <span class="function">fo </span><span class="comment">=</span><span class="function">open</span> <span class="brackets">(</span><span class="disptxt">"foo.txt", "r+"</span><span class="brackets">)</span><br>
+                <span class="function">str </span><span class="comment">=</span><span class="function">fo.read</span> <span class="brackets">(</span><span class="filename">10</span><span class="brackets">)</span><br>
+                <span class="function"> print </span><span class="disptxt">"Read String is : ",</span><span class="function">str</span>  <br>
                 <br>
-                <span class="function"># Close opend file</span><br>
-                <span class="disptxt">fo.close()</span>
+                <span class="comment"># Close opend file</span><br>
+                <span class="function">fo.close</span><span class="brackets">()</span></span>
             </p>
         </aside>
         <p class="content">
@@ -429,7 +427,7 @@
 
         <nav class="page-links">
             <button class="btn-pglinks" onclick="location.href='/modules'"><i class="fa fa-angle-left"></i>Previous Page</button>
-            <button class="btn-pglinks" onclick="pdf_con()">PDF Preview</button>
+            <button class="btn-pglinks">PDF Preview</button>
             <button class="btn-pglinks" onclick="location.href='/exceptions'">Next Page<i class="fa fa-angle-right"></i></button>
         </nav>
 </section>

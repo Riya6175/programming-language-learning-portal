@@ -6,12 +6,12 @@
 
     <h2 class="page-title">Modules</h2>
     <nav class="links">
-        <button class="btn-links">PDF</button>
-        <button class="btn-links" onclick="location.href='/date-time'">Date-Time </button>
+        <button class="btn-links">PDF Version</button>
+        <button class="btn-links" onclick="location.href='/date-time'">Date & Time </button>
         <button class="btn-links" onclick="location.href='/functions'">Functions</button>
         <button class="btn-links" onclick="location.href='/fileio'">FileIO </button>
-        <button class="btn-links" onclick="location.href='/exceptions'">Exceptions </button>
-        <button class="btn-links" onclick="location.href='/class-objects'">Class-Objects </button>
+        <button class="btn-links" onclick="location.href='/exceptions'">exceptions </button>
+        <button class="btn-links" onclick="location.href='/class-objects'">class-objects </button>
     </nav>
         <p class="content">
             A module allows you to logically organize your Python code. Grouping related code into a module makes the code easier to understand and use.
@@ -26,8 +26,8 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">def print_func</span><span class="brackets">(</span><span class="function"> par </span><span class="brackets">)</span>:<br>
-                <span class="function">print</span> <span class="disptxt">"Hello: ",</span> par<br>
+                <span class="function">def print_func</span><span class="brackets">(</span><span class="function"> par </span><span class="brackets">)</span><span class="comment">:</span><br>
+                <span class="function">print</span> <span class="disptxt">"Hello: ",</span><span class="function">par</span><br>
                 <span class="function">return</span>
             </p>
         </aside>
@@ -48,12 +48,12 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
-                <span class="function"># Import module support</span><br>
+                <span class="comment">#Import module support</span><br>
                 <span class="function">import support</span><br>
-                <span class="function"># Now you can call defined function that module as follows</span><br>
-                <span class="function">support.print_func</span> <span class="brackets">(</span><span class="disptxt">"Zara"</span><span class="brackets">)</span>;
+                <span class="comment">#Now you can call defined function that module as follows</span><br>
+                <span class="function">support.print_func</span> <span class="brackets">(</span><span class="disptxt">"Zara"</span><span class="brackets">)</span><span class="comment">;</span>
             </p>
         </aside>
         <p class="content">
@@ -148,17 +148,17 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
-                <span class="function">Money = 2000</span><br>
-                <span class="function">def </span> <span class="brackets">( </span> <span class="disptxt">AddMoney</span> <span class="brackets"> ) </span>:<br>
-                <span class="function"># Uncomment the following line to fix the code:</span><br>
-                <span class="function"># global Money</span><br>
-                Money = Money + 1<br>
+                <span class="function">Money</span><span class="comment"> = </span><span class="filename">2000</span><br>
+                <span class="function">def AddMoney</span> <span class="brackets">( ) </span><span class="comment">:</span><br>
+                <span class="comment">#Uncomment the following line to fix the code:</span><br>
+                <span class="comment">#global Money</span><br>
+                <span class="function">Money</span><span class="comment">=</span> =<span class="function">Money</span> <span class="comment">+</span><span class="filename">1</span><br>
                 <br>
-                <span class="function">print</span> <span class="disptxt">Money</span> <br>
-                <span class="disptxt">AddMoney</span> <span class="brackets">( )</span><br>
-                <span class="function">print</span><span class="disptxt">Money</span> <br>
+                <span class="function">print Money</span> <br>
+                <span class="function">AddMoney</span> <span class="brackets">( )</span><br>
+                <span class="function">print Money</span> <br>
             </p>
         </aside>
 
@@ -169,12 +169,12 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <br>
-                <span class="function"># Import built-in module math</span><br>
+                <span class="comment">#Import built-in module math</span><br>
                 <span class="function"> Import  math</span><br>
                 <br>
-                <span class="function"> content = dir</span><span class="brackets">(</span><span class="disptxt">Math</span><span class="brackets">)</span><br>
+                <span class="function"> content<span class="comment">=</span> dir</span><span class="brackets">(</span><span class="function">Math</span><span class="brackets">)</span><br>
                 <span class="function"> print content </span><br>
             </p>
         </aside>
@@ -243,7 +243,7 @@
         <hr>
         <nav class="page-links">
             <button class="btn-pglinks" onclick="location.href='/functions'"><i class="fa fa-angle-left"></i>Previous Page</button>
-            <button class="btn-pglinks" onclick="pdf_con()">PDF Preview</button>
+            <button class="btn-pglinks">PDF Preview</button>
             <button class="btn-pglinks" onclick="location.href='/fileio'">Next Page<i class="fa fa-angle-right"></i></button>
         </nav>
 </section>

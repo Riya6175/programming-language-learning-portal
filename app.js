@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const app = express();
 const session = require('express-session');
-const passport = require("passport");
+const passport = require("passport")
+  , LocalStrategy = require('passport-local').Strategy;
 const passportLocalMongoose = require("passport-local-mongoose");
 const mongoose = require("mongoose");
 const Window = require('window');
@@ -12,7 +13,6 @@ const window = new Window()
 const fs = require("fs");
 const bcrypt = require('bcryptjs');
 var flash = require('connect-flash');
-const LocalStrategy = require('passport-local').Strategy;
 
 
 app.use(express.json());
@@ -143,10 +143,6 @@ app.get('/home', function(req, res) {
   app.get('/overview', function(req,res){
     res.render('overview');
   });
-
-  app.get('/introduction', function(req,res){
-    res.render('introduction');
-  });
   app.get('/basic-syntax', function(req,res){
     res.render('basic-syntax');
   });
@@ -234,7 +230,9 @@ app.get('/home', function(req, res) {
 
   app.get("/editor",function(req,res){
     if(req.isAuthenticated()){
-      res.render("editor");
+      res.render("editor",{
+        username: req.user.username
+      });
     }else{
       res.redirect("/login-signup");
     }
@@ -246,11 +244,6 @@ app.get('/home', function(req, res) {
   });
 //-----------------post - request for login-signup-------------------------------------------
 app.use(flash());
-
-app.use(function(req,res,next){
-  res.locals.error = req.flash('error');
-  next();
-})
 
 app.post("/login", function(req,res){
   const { username, password  } = req.body;
@@ -279,34 +272,21 @@ app.post("/login", function(req,res){
         });
       }
       else{
-        // req.login(user, function(err){
-        //   if(err){
-        //     console.log(err);
-        //   }
-        //   else{
+        req.login(user, function(err){
+           if(err){
+            console.log(err);
+          }
+          else{
             passport.authenticate("local")(req, res, function(){
-              if(err){
-                errors2.push({msg: 'incorrect password'});
-                res.render("login-signup",{
-                  errors2,
-                  username,
-                  password
-                });
-              }
-              else{
-                res.redirect("/editor");
-              }
-              
-                // res.render("editor",{
-                //   username: req.user.username
-                // });
+              res.redirect("/editor");
             });
-          //}
-        //});
+          }
+        });
       }
     })
   }
 });
+
 
 app.post('/signup', (req, res) => {
   const { username, Email, password  } = req.body;
@@ -320,9 +300,9 @@ app.post('/signup', (req, res) => {
      
     });
   } else {
-    User.findOne({ username: username }).then(user => {
+    User.findOne({ username: username,Email:Email }).then(user => {
       if (user) {
-        errors.push({ msg: 'username already exists' });
+        errors.push({ msg: 'username or email already exists' });
         res.render('login-signup', {
           errors,
           username,
@@ -344,10 +324,10 @@ app.post('/signup', (req, res) => {
           }else{
             passport.authenticate("local")(req, res, function(){
               //if(!password)
-              res.redirect("/editor");
-              // res.render("editor",{
-              //   username: req.user.username
-              // })
+              //res.redirect("/editor");
+              res.render("editor",{
+                username: req.user.username
+              });
             });
           }
         });

@@ -5,8 +5,7 @@
 
     <h2 class="page-title">Date & Time</h2>
     <nav class="links">
-        <button class="btn-links" onclick="pdf_con()">PDF Version</button>
-        <button class="btn-links">PDF</button>
+        <button class="btn-links">PDF Version</button>
         <button class="btn-links" onclick="location.href='/functions'">Function</button>
         <button class="btn-links" onclick="location.href='/modules'">Modules </button>
         <button class="btn-links" onclick="location.href='/fileio'">FileIO </button>
@@ -30,12 +29,12 @@
         <h3 class="subtittle">Example</h3>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
+                <span class="comment">#This is required to include time module.</span><br>
                 <span class="function">import time;</span><br>
-                <span class="function"># This is required to include time module.</span><br>
                 <br>
-                ticks = time.time<br><span class="brackets">( )</span>
-                <span class="function">print</span> <span class="disptxt">"Number of ticks since 12:00am, January 1, 1970:",</span> ticks<br>
+                <span class="function">ticks</span> <span class="comment" >=</span> <span class="function">time.time</span><span class="brackets">()</span><br>
+                <span class="function">print</span> <span class="disptxt">"Number of ticks since 12:00am, January 1, 1970:",</span><span class="comment">ticks</span></span><br>
             </p>
         </aside>
         <p class="content">
@@ -170,11 +169,11 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <span class="function">import time;</span><br>
                 <br>
-                localtime = time.localtime <span class="brackets">( time.time() )</span><br>
-                <span class="function">print</span> <span class="disptxt">"Local current time :",</span> localtime<br>
+                <span class="function">localtime</span> <span class="comment"> = </span> <span class="function">time.localtime</span> <span class="brackets">(</span> <span class="function">time.time</span><span class="brackets">() ) </span><br>
+                <span class="function">print </span> <span class="disptxt">"Local current time :",</span><span class="function">localtime</span> <br>
             </p>
         </aside>
         <p class="content">
@@ -192,11 +191,11 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <span class="function">import time;</span><br>
                 <br>
-                localtime = time.asctime <span class="brackets">( time.localtime(time.time()) )</span><br>
-                <span class="function">print</span> <span class="disptxt">"Local current time :",</span> localtime<br>
+                <span class="function">localtime </span><span class="comment">=</span> <span class="function">time.asctime</span> <span class="brackets">(</span> <span class="function">time.localtime</span><span class="brackets">(</span> <span class="function">time.time</span><span class="brackets">()) )</span></span><br>
+                <span class="function">print</span> <span class="disptxt">"Local current time :",</span><span class="function">localtime</span> <br>
             </p>
         </aside>
         <p class="content">
@@ -214,12 +213,12 @@
         </p>
         <aside class="code-frame">
             <p class="code">
-                <span class="function">#!/usr/bin/python</span><br>
+                <span class="comment">#!/usr/bin/python</span><br>
                 <span class="function">import calander;</span><br>
                 <br>
-                cal = calender.month <span class="brackets">(2008, 1)</span><br>
+                <span class="function">cal</span><span class="comment"> = </span><span class="function">calender.month</span> <span class="brackets">( </span><span class="filename">2008, 1</span><span class="brackets"> )</span><br>
                 <span class="disptxt">"Here is the calendar:"</span><br>
-                <span class="function">print</span> cal<br>
+                <span class="function">print</span><span class="function"> cal</span> <br>
             </p>
         </aside>
         <p class="content">
@@ -240,11 +239,10 @@
 
         <hr>
         <nav class="page-links">
-            <button class="btn-pglinks" onclick="location.href='/dictionary'"><i class="fa fa-angle-left"></i>Prev Page</button>
+            <button class="btn-pglinks" onclick="location.href='/dictionary'"><i class="fa fa-angle-left"></i>Previous Page</button>
             <button class="btn-pglinks">PDF Preview</button>
             <button class="btn-pglinks" onclick="location.href='/functions'">Next Page<i class="fa fa-angle-right"></i></button>
         </nav>
-
 </section>
 
 <%- include ("partials/footer") -%>
