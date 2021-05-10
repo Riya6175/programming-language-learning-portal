@@ -570,7 +570,7 @@ h1.dev-head{
   color:rgba(0, 0, 0, 0.7);
 }
 
-@media (min-width:360px) and (max-width:500px){
+@media (min-width:340px) and (max-width:500px){
   .grid-container.about-grid{
     display: grid;
     grid-template-columns: 0fr 1fr;
@@ -606,13 +606,28 @@ h1.dev-head{
     margin-top: 200px;
   }
 
-  .homepage {
-    width: 200%;
-  }
 
   .grid-container{
     display: block;
   }
+
+  .subheading{
+    font-size: 70px !important;
+  }
+
+  .mb-4{
+    font-size: 1.4rem;
+  }
+  
+  .text-center{
+    margin-bottom: 250px;
+  }
+
+  .grid-item.code-content{
+    padding: 10px 10px;
+  }
+
+
 }
 
 @media (min-width:500px) and (max-width:786px){
