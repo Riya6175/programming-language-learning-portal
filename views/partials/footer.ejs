@@ -105,6 +105,10 @@ function pdf_con()
   fetch (pdf_link)
     .then(window.open(pdf_link));
 }
+
+if ('serviceWorker' in navigator){
+  navigator.serviceWorker.register('service-worker.js');
+}
 </script >
 </body>
 </html>
